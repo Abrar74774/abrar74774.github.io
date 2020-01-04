@@ -4,7 +4,7 @@ var overlay = document.getElementById("overlay");
 var close = document.getElementById("close");
 
 
-// Portfolio menu divs==============================================
+//================================== Portfolio menu divs==============================================
 
 var div1 = document.getElementById("a");
 var div2 = document.getElementById("b");
@@ -14,7 +14,7 @@ var div5 = document.getElementById("e");
 var div6 = document.getElementById("f");
 
 
-//Function=========================================================
+//===================================Function=========================================================
 
 function popupEffect(data)  {
   div.innerHTML = 
@@ -40,7 +40,7 @@ function popupEffect(data)  {
 };
 
 
-//Click Event Handler================================================
+//============================================Click Event Handler================================================
 
 //Portfolio popup
 
@@ -78,7 +78,7 @@ overlay.addEventListener("click", closepopup);
 close.addEventListener("click", closepopup);
 
 
-// Individual Project Data=================================================
+// =================================Individual Project Data=================================================
 
 var data1 = {
   title:"React Weather App",
@@ -86,7 +86,7 @@ var data1 = {
   site:"https://abrar74774.github.io/ReactWeatherApp",
   source:"https://github.com/Abrar74774/ReactWeatherApp",
   description:"This is an app, where user enters the location or location coordinates, and the app displays current temperature of the location with highest and lowest temperature of the day, along with those of the next five days.<br><br>This is a web app built with React. It uses fetch API for fetching data from arcgis autocomplete REST API, and searches weather data from DarkSky API, and displays it. It uses React Router for showing two pages of the app.",
-  img:"/dist/img/reactweatherapp2.png"
+  img:"./img/reactweatherapp2.png"
 }
 
 var data2 = {
@@ -95,7 +95,7 @@ var data2 = {
   site:"https://abrar74774.github.io/Dictionary/",
   source:"https://github.com/Abrar74774/Dictionary",
   description:"This is a dictionary app. It takes a word as user input, and displays the meaning and description of the word along with the word type.<br><br>The app uses Javascript ES6's fetch API to fetch data from OwlBot API.",
-  img:'/dist/img/dict.jpg'
+  img:'./img/dict.jpg'
 }
 
 var data3 = {
@@ -104,7 +104,7 @@ var data3 = {
   site:"https://abrar74774.github.io/myClock",
   source:"https://github.com/Abrar74774/myClock",
   description:"This is a Javascript clock, which is designed with the most famous design tool in the world, MS Paint.",
-  img:'/dist/img/clock.jpg'
+  img:'./img/clock.jpg'
 }
 
 var data4 = {
@@ -113,7 +113,7 @@ var data4 = {
   site:"https://abrar74774.github.io/Construction-Website",
   source:"https://github.com/Abrar74774/Construction-Website",
   description:"This is a construction company website.<br> The page is designed with CSS, it is responsive, and has some javascript effects.",
-  img:'/dist/img/const.jpg'
+  img:'./img/const.jpg'
 }
 
 var data5 = {
@@ -122,7 +122,7 @@ var data5 = {
   site:"https://abrar74774.github.io/Word-Counter",
   source:"https://github.com/Abrar74774/Word-Counter",
   description:"This is a Word Counter App built with Javascript.",
-  img:'/dist/img/wc.jpg'
+  img:'./img/wc.jpg'
 }
 
 var data6 = {
@@ -131,7 +131,5 @@ var data6 = {
   site:"https://abrar74774.github.io/Restaurant",
   source:"https://github.com/Abrar74774/Restaurant",
   description:"This is a Restaurant Website, which is responsive, designed with CSS.",
-  img:'/dist/img/rest.jpg'
+  img:'./img/rest.jpg'
 }
-
-console.log(getComputedStyle(popup).transitionDuration.replace('s','') * 1000);
