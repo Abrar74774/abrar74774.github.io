@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box; }
+
+::selection {
+  background-color: #5ed1ff;
+  color: white; }
+
+body, html {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  position: relative; }
+
+body {
+  min-height: 100%; }
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 0; }
+
+h2 {
+  text-align: center;
+  font-weight: 300; }
+
+ul {
+  margin: 0;
+  padding: 0 0 0 20px; }
+
+#overlay {
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  position: fixed;
+  z-index: -999;
+  height: 100%;
+  width: 100%; }
+
+#popup {
+  height: 80%;
+  width: 80%;
+  background-color: white;
+  padding: 80px 10vw;
+  position: fixed;
+  right: 10%;
+  top: 10%;
+  z-index: -9;
+  opacity: 0;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  font-size: 18px; }
+  #popup #close {
+    line-height: 0.7;
+    height: 25px;
+    width: 20px;
+    margin: 20px;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer; }
+  #popup .viewlang {
+    display: flex;
+    height: 285px; }
+    #popup .viewlang .view {
+      flex: 1;
+      background-size: cover;
+      background-position: center; }
+    #popup .viewlang .lang {
+      flex: 1;
+      margin-left: 50px; }
+      #popup .viewlang .lang a {
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        width: auto;
+        height: 35px;
+        padding: 3px 10px;
+        margin-right: 20px;
+        background-color: #5ed1ff;
+        color: black;
+        transition: background-color 0.3s; }
+        #popup .viewlang .lang a:hover {
+          background-color: #9fe4ff; }
+  #popup p {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 50px; }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  height: 80px;
+  width: 100%;
+  margin-bottom: -80px;
+  padding: 0 10px; }
+  nav a {
+    padding: 20px; }
+    nav a i {
+      color: #5ed1ff;
+      font-size: 45px;
+      transition: color 0.3s; }
+    nav a:hover {
+      cursor: pointer; }
+      nav a:hover i {
+        color: white; }
+
+.homepic-overlay {
+  background-color: #0000008d;
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+#homepic {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #222; }
+  #homepic:before {
+    content: "";
+    margin: 0 auto;
+    filter: blur(0.17rem);
+    background-image: url("../img/coding.png");
+    background-size: cover;
+    background-position: center;
+    width: 102%;
+    height: 100%;
+    position: absolute; }
+
+.hello {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+  z-index: 1;
+  width: 100%;
+  font-weight: 300;
+  font-size: 70px;
+  line-height: 1.1; }
+  .hello span {
+    color: #5ed1ff;
+    font-weight: 400; }
+  .hello:after {
+    display: none; }
+
+#portfolio {
+  display: flex;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #portfolio div {
+    width: 500px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+    position: relative;
+    margin: 10px;
+    color: white;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); }
+    #portfolio div:after {
+      box-sizing: border-box;
+      background-color: rgba(94, 209, 255, 0.93);
+      opacity: 0;
+      padding: 25% 0;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: opacity 0.3s; }
+    #portfolio div:hover:after {
+      opacity: 1;
+      cursor: pointer; }
+  #portfolio #a::after {
+    content: "React Weather App"; }
+  #portfolio #b::after {
+    content: "Dictionary App"; }
+  #portfolio #c::after {
+    content: "Doodle Clock"; }
+  #portfolio #d::after {
+    content: "Construction Website"; }
+  #portfolio #e::after {
+    content: "Word Counter"; }
+  #portfolio #f::after {
+    content: "Restaurant Website"; }
+
+#about {
+  width: 100%;
+  height: auto;
+  margin: 80px auto;
+  padding: 80px 0; }
+
+.flex {
+  display: flex;
+  width: 75%;
+  margin: 1px auto;
+  height: auto; }
+  .flex .content {
+    flex: 5;
+    padding: 10px;
+    height: auto; }
+    .flex .content p {
+      text-align: center; }
+    .flex .content .skills {
+      display: flex;
+      justify-content: center;
+      height: auto; }
+      .flex .content .skills ul {
+        margin: 1px auto;
+        position: relative;
+        list-style-type: none;
+        width: 125px; }
+      .flex .content .skills li i {
+        color: #5ed1ff; }
+
+#contact {
+  background-color: #5ed1ff;
+  padding: 300px 5vw; }
+
+footer {
+  background-color: #222;
+  min-height: 200px;
+  width: 100%;
+  color: #666; }
+  footer .container {
+    height: inherit;
+    width: 70%;
+    margin: 0 auto;
+    padding: 85px 0;
+    overflow: hidden;
+    text-align: center; }
+    footer .container a {
+      color: #5ed1ff; }
+
+@media screen and (max-width: 786px) {
+  .flex .content .skills {
+    flex-direction: column; } }
+
+@media screen and (max-width: 1100px) {
+  .hello {
+    font-size: 65px;
+    text-align: left;
+    transform: translateY(-50%); }
+  #contact h2 {
+    font-size: 4vw; } }
