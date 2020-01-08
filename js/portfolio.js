@@ -85,7 +85,7 @@ var data1 = {
   lang:["React","REST API(Darksky and arcgis)", "CSS", "HTML"],
   site:"https://abrar74774.github.io/ReactWeatherApp",
   source:"https://github.com/Abrar74774/ReactWeatherApp",
-  description:"This is an app, where user enters the location or location coordinates, and the app displays current temperature of the location with highest and lowest temperature of the day, along with those of the next five days.<br><br>This is a web app built with React. It uses fetch API for fetching data from arcgis autocomplete REST API, and searches weather data from DarkSky API, and displays it. It uses React Router for showing two pages of the app.",
+  description:"This is an app, where user enters the location or location coordinates, and the app displays current temperature of the location with highest and lowest temperature of the day, along with those of the next five days.<br><br>The app is with React. It uses fetch API for fetching data from arcgis autocomplete REST API, and searches weather data from DarkSky API, and displays it. It uses React Router for showing two pages of the app.",
   img:"./img/reactweatherapp2.png"
 }
 

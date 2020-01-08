@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 ::selection {
-  background-color: #5ed1ff;
+  background-color: #24bffd;
   color: white; }
 
 body, html {
@@ -47,8 +47,9 @@ ul {
 #popup {
   height: 80%;
   width: 80%;
+  overflow-y: auto;
   background-color: white;
-  padding: 80px 10vw;
+  padding: 5% 10vw;
   position: fixed;
   right: 10%;
   top: 10%;
@@ -67,31 +68,33 @@ ul {
     right: 0;
     top: 0;
     cursor: pointer; }
-  #popup .viewlang {
-    display: flex;
-    height: 285px; }
-    #popup .viewlang .view {
-      flex: 1;
-      background-size: cover;
-      background-position: center; }
-    #popup .viewlang .lang {
-      flex: 1;
-      margin-left: 50px; }
-      #popup .viewlang .lang a {
-        text-decoration: none;
-        text-align: center;
-        display: inline-block;
-        width: auto;
-        height: 35px;
-        padding: 3px 10px;
-        margin-right: 20px;
-        background-color: #5ed1ff;
-        color: black;
-        transition: background-color 0.3s; }
-        #popup .viewlang .lang a:hover {
-          background-color: #9fe4ff; }
+  #popup #popupcontent {
+    height: 90%; }
+    #popup #popupcontent .viewlang {
+      display: flex;
+      height: 285px; }
+      #popup #popupcontent .viewlang .view {
+        flex: 1;
+        background-size: cover;
+        background-position: center; }
+      #popup #popupcontent .viewlang .lang {
+        flex: 1;
+        margin-left: 50px; }
+        #popup #popupcontent .viewlang .lang a {
+          text-decoration: none;
+          text-align: center;
+          display: inline-block;
+          width: auto;
+          height: 35px;
+          padding: 3px 10px;
+          margin-right: 20px;
+          background-color: #24bffd;
+          color: black;
+          transition: background-color 0.3s; }
+          #popup #popupcontent .viewlang .lang a:hover {
+            background-color: #9fe4ff; }
   #popup p {
-    text-align: center;
+    text-align: justify;
     margin-top: 40px;
     padding: 0 50px; }
 
@@ -108,7 +111,7 @@ nav {
   nav a {
     padding: 20px; }
     nav a i {
-      color: #5ed1ff;
+      color: #24bffd;
       font-size: 45px;
       transition: color 0.3s; }
     nav a:hover {
@@ -147,10 +150,10 @@ nav {
   z-index: 1;
   width: 100%;
   font-weight: 300;
-  font-size: 70px;
+  font-size: 3.5rem;
   line-height: 1.1; }
   .hello span {
-    color: #5ed1ff;
+    color: #24bffd;
     font-weight: 300; }
   .hello:after {
     display: none; }
@@ -161,8 +164,8 @@ nav {
   flex-wrap: wrap;
   justify-content: center; }
   #portfolio div {
-    width: 500px;
-    height: 300px;
+    width: 30vw;
+    height: 38vh;
     background-size: cover;
     background-position: center;
     font-size: 30px;
@@ -212,7 +215,7 @@ nav {
     padding: 10px;
     height: auto; }
     .flex .content p {
-      text-align: center; }
+      text-align: justify; }
     .flex .content .skills {
       display: flex;
       justify-content: center;
@@ -223,10 +226,10 @@ nav {
         list-style-type: none;
         width: 125px; }
       .flex .content .skills li i {
-        color: #5ed1ff; }
+        color: #24bffd; }
 
 #contact {
-  background-color: #5ed1ff;
+  background-color: #24bffd;
   padding: 300px 5vw; }
 
 footer {
@@ -242,7 +245,7 @@ footer {
     overflow: hidden;
     text-align: center; }
     footer .container a {
-      color: #5ed1ff; }
+      color: #24bffd; }
 
 @media screen and (max-width: 786px) {
   .flex .content .skills {
@@ -255,3 +258,8 @@ footer {
     transform: translateY(-50%); }
   #contact h2 {
     font-size: 4vw; } }
+
+@media screen and (max-width: 1300px) {
+  #portfolio div {
+    height: 300px;
+    width: 500px; } }
