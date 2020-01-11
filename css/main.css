@@ -2,10 +2,15 @@
   box-sizing: border-box; }
 
 ::selection {
-  background-color: #24bffd;
+  background-color: #2457fd;
   color: white; }
 
+::-webkit-scrollbar-track {
+  background: #000000; }
+
 body, html {
+  background-color: #2457fd;
+  color: white;
   min-height: 100%;
   width: 100%;
   padding: 0;
@@ -19,7 +24,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 300;
   margin-bottom: 0; }
 
@@ -47,9 +52,9 @@ ul {
 #popup {
   height: 80%;
   width: 80%;
-  overflow-y: auto;
-  background-color: white;
-  padding: 5% 10vw;
+  border-radius: 20px;
+  background-color: #2457fd;
+  padding: 5% 5vw;
   position: fixed;
   right: 10%;
   top: 10%;
@@ -69,34 +74,44 @@ ul {
     top: 0;
     cursor: pointer; }
   #popup #popupcontent {
-    height: 90%; }
+    height: 100%;
+    overflow-y: auto; }
+    #popup #popupcontent h2 {
+      margin-top: 0;
+      margin-bottom: 15px; }
     #popup #popupcontent .viewlang {
       display: flex;
-      height: 285px; }
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto; }
       #popup #popupcontent .viewlang .view {
-        flex: 1;
         background-size: cover;
-        background-position: center; }
+        background-position: center;
+        height: 310px;
+        width: 600px;
+        border-radius: 15px; }
       #popup #popupcontent .viewlang .lang {
-        flex: 1;
-        margin-left: 50px; }
+        margin: 0 auto;
+        height: auto;
+        width: 300px; }
         #popup #popupcontent .viewlang .lang a {
           text-decoration: none;
           text-align: center;
           display: inline-block;
-          width: auto;
-          height: 35px;
-          padding: 3px 10px;
-          margin-right: 20px;
-          background-color: #24bffd;
-          color: black;
+          width: 250px;
+          height: auto;
+          border-radius: 20px;
+          padding: 5px 10px;
+          margin: 5px 0;
+          background-color: #222;
+          color: white;
           transition: background-color 0.3s; }
           #popup #popupcontent .viewlang .lang a:hover {
-            background-color: #9fe4ff; }
-  #popup p {
-    text-align: justify;
-    margin-top: 40px;
-    padding: 0 50px; }
+            background-color: #444; }
+    #popup #popupcontent p {
+      text-align: justify;
+      margin-top: 40px;
+      padding: 0 50px; }
 
 nav {
   display: flex;
@@ -111,7 +126,7 @@ nav {
   nav a {
     padding: 20px; }
     nav a i {
-      color: #24bffd;
+      color: #2457fd;
       font-size: 45px;
       transition: color 0.3s; }
     nav a:hover {
@@ -153,7 +168,7 @@ nav {
   font-size: 3.5rem;
   line-height: 1.1; }
   .hello span {
-    color: #24bffd;
+    color: #2457fd;
     font-weight: 300; }
   .hello:after {
     display: none; }
@@ -164,20 +179,21 @@ nav {
   flex-wrap: wrap;
   justify-content: center; }
   #portfolio div {
-    width: 30vw;
-    height: 38vh;
+    width: 510px;
+    height: 300px;
+    border-radius: 10px;
     background-size: cover;
     background-position: center;
-    font-size: 30px;
     position: relative;
     margin: 10px;
-    color: white;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); }
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3); }
     #portfolio div:after {
       box-sizing: border-box;
-      background-color: rgba(94, 209, 255, 0.93);
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.8);
       opacity: 0;
-      padding: 25% 0;
+      padding: 135px 0 0;
+      font-size: 25px;
       text-align: center;
       width: 100%;
       height: 100%;
@@ -207,12 +223,12 @@ nav {
 
 .flex {
   display: flex;
-  width: 75%;
+  width: 80vw;
   margin: 1px auto;
   height: auto; }
   .flex .content {
     flex: 5;
-    padding: 10px;
+    padding: 10px 2vw;
     height: auto; }
     .flex .content p {
       text-align: justify; }
@@ -221,16 +237,14 @@ nav {
       justify-content: center;
       height: auto; }
       .flex .content .skills ul {
-        margin: 1px auto;
+        margin: 1px 5vw;
         position: relative;
         list-style-type: none;
         width: 125px; }
-      .flex .content .skills li i {
-        color: #24bffd; }
 
 #contact {
-  background-color: #24bffd;
-  padding: 300px 5vw; }
+  padding: 200px 5vw;
+  background-color: #333; }
 
 footer {
   background-color: #222;
@@ -245,11 +259,7 @@ footer {
     overflow: hidden;
     text-align: center; }
     footer .container a {
-      color: #24bffd; }
-
-@media screen and (max-width: 786px) {
-  .flex .content .skills {
-    flex-direction: column; } }
+      color: #2457fd; }
 
 @media screen and (max-width: 1100px) {
   .hello {
@@ -259,7 +269,28 @@ footer {
   #contact h2 {
     font-size: 4vw; } }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 786px) {
+  .flex .content .skills {
+    flex-direction: column; } }
+
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 36px; }
+  #popup {
+    font-size: 16px; }
+    #popup #popupcontent .viewlang .view {
+      height: 20vh; }
+    #popup #popupcontent .viewlang .lang {
+      width: 70%; }
+      #popup #popupcontent .viewlang .lang a {
+        width: 150px;
+        margin: 5px auto; }
+    #popup #popupcontent p {
+      padding: 10px; }
   #portfolio div {
-    height: 300px;
-    width: 500px; } }
+    height: 24vh;
+    width: 94vw; }
+    #portfolio div:after {
+      padding: 10vh 0; }
+  .hello {
+    font-size: 54px; } }
