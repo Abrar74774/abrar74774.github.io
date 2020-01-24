@@ -2,14 +2,14 @@
   box-sizing: border-box; }
 
 ::selection {
-  background-color: #2457fd;
+  background-color: #2c97fc;
   color: white; }
 
 ::-webkit-scrollbar-track {
   background: #000000; }
 
 body, html {
-  background-color: #2457fd;
+  background-color: #222;
   color: white;
   min-height: 100%;
   width: 100%;
@@ -24,16 +24,17 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 45px;
-  font-weight: 300;
+  font-size: 56px;
+  font-weight: 100;
   margin-bottom: 0; }
 
 h2 {
   text-align: center;
-  font-weight: 300; }
+  font-size: 30px;
+  font-weight: 100; }
 
 h3 {
-  font-weight: 300; }
+  font-weight: 100; }
 
 ul {
   margin: 0;
@@ -51,12 +52,11 @@ ul {
 
 #popup {
   height: 80%;
-  width: 80%;
-  border-radius: 20px;
-  background-color: #2457fd;
+  width: 90%;
+  background-color: #222;
   padding: 5% 5vw;
   position: fixed;
-  right: 10%;
+  right: 5%;
   top: 10%;
   z-index: -9;
   opacity: 0;
@@ -64,11 +64,14 @@ ul {
   -webkit-transition: opacity 0.3s;
   font-size: 18px; }
   #popup #close {
-    line-height: 0.7;
-    height: 25px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 20px;
+    background-color: #ffffff10;
     margin: 20px;
-    font-size: 30px;
+    font-size: 25px;
     position: absolute;
     right: 0;
     top: 0;
@@ -77,7 +80,7 @@ ul {
     height: 100%;
     overflow-y: auto; }
     #popup #popupcontent h2 {
-      margin-top: 0;
+      margin-top: 15px;
       margin-bottom: 15px; }
     #popup #popupcontent .viewlang {
       display: flex;
@@ -88,28 +91,28 @@ ul {
         background-size: cover;
         background-position: center;
         height: 310px;
-        width: 600px;
-        border-radius: 15px; }
+        width: 600px; }
       #popup #popupcontent .viewlang .lang {
-        margin: 0 auto;
+        margin: 0 0 0 0.3vw;
         height: auto;
-        width: 300px; }
+        width: 300px;
+        padding: 0 20px; }
         #popup #popupcontent .viewlang .lang a {
           text-decoration: none;
+          font-weight: 300;
           text-align: center;
           display: inline-block;
           width: 250px;
           height: auto;
-          border-radius: 20px;
           padding: 5px 10px;
           margin: 5px 0;
-          background-color: #222;
+          background-color: #2c97fc;
           color: white;
           transition: background-color 0.3s; }
           #popup #popupcontent .viewlang .lang a:hover {
-            background-color: #444; }
+            background-color: #6eb6f8; }
     #popup #popupcontent p {
-      text-align: justify;
+      text-align: center;
       margin-top: 40px;
       padding: 0 50px; }
 
@@ -126,7 +129,7 @@ nav {
   nav a {
     padding: 20px; }
     nav a i {
-      color: #2457fd;
+      color: #2c97fc;
       font-size: 45px;
       transition: color 0.3s; }
     nav a:hover {
@@ -137,15 +140,17 @@ nav {
 .homepic-overlay {
   background-color: #0000008d;
   position: absolute;
+  z-index: 5;
   height: 100%;
   width: 100%; }
 
-#homepic {
+.homepic {
+  z-index: 4;
   position: relative;
   height: 100vh;
   overflow-x: hidden;
   background-color: #222; }
-  #homepic:before {
+  .homepic:before {
     content: "";
     margin: 0 auto;
     filter: blur(0.17rem);
@@ -164,71 +169,84 @@ nav {
   transform: translateY(-100%);
   z-index: 1;
   width: 100%;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 3.5rem;
   line-height: 1.1; }
   .hello span {
-    color: #2457fd;
-    font-weight: 300; }
+    color: #2c97fc;
+    font-weight: 400; }
   .hello:after {
     display: none; }
 
+#proj {
+  opacity: 0;
+  transition: opacity 1s; }
+
 #portfolio {
+  opacity: 0;
   display: flex;
+  width: 70vw;
   margin: 20px auto;
   flex-wrap: wrap;
-  justify-content: center; }
-  #portfolio div {
-    width: 510px;
-    height: 300px;
-    border-radius: 10px;
+  justify-content: center;
+  transition: opacity 1s; }
+  #portfolio .projects {
+    width: 400px;
+    height: 250px;
     background-size: cover;
     background-position: center;
     position: relative;
-    margin: 10px;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3); }
-    #portfolio div:after {
-      box-sizing: border-box;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.8);
+    padding: 0;
+    margin: 7px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s; }
+    #portfolio .projects:hover {
+      transform: scale(1.02); }
+    #portfolio .projects .over {
+      margin: 0;
+      padding: 65px 0 0 0;
+      color: white;
+      background-color: #2c97fc;
       opacity: 0;
-      padding: 135px 0 0;
-      font-size: 25px;
       text-align: center;
       width: 100%;
       height: 100%;
       position: absolute;
+      top: 0px;
+      left: 0;
       transition: opacity 0.3s; }
-    #portfolio div:hover:after {
-      opacity: 1;
-      cursor: pointer; }
-  #portfolio #a::after {
-    content: "React Weather App"; }
-  #portfolio #b::after {
-    content: "Dictionary App"; }
-  #portfolio #c::after {
-    content: "Doodle Clock"; }
-  #portfolio #d::after {
-    content: "Construction Website"; }
-  #portfolio #e::after {
-    content: "Word Counter"; }
-  #portfolio #f::after {
-    content: "Restaurant Website"; }
+      #portfolio .projects .over:hover {
+        opacity: 1;
+        cursor: pointer; }
+      #portfolio .projects .over h2 {
+        font-size: 34px;
+        margin: 20px 0 0 0; }
+      #portfolio .projects .over h3 {
+        margin: 0 5px; }
+      #portfolio .projects .over .learn-more {
+        height: 50px;
+        font-size: 18px;
+        font-weight: 300;
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto; }
 
 #about {
+  opacity: 0;
   width: 100%;
-  height: auto;
   margin: 80px auto;
-  padding: 80px 0; }
+  padding: 80px 0;
+  transition: opacity 0.7s;
+  background-color: #222; }
 
 .flex {
   display: flex;
-  width: 80vw;
+  width: 50vw;
   margin: 1px auto;
   height: auto; }
   .flex .content {
     flex: 5;
-    padding: 10px 2vw;
+    padding: 10px 0;
     height: auto; }
     .flex .content p {
       text-align: justify; }
@@ -241,13 +259,37 @@ nav {
         position: relative;
         list-style-type: none;
         width: 125px; }
+        .flex .content .skills ul li span i {
+          color: #2c97fc; }
 
 #contact {
+  opacity: 0;
   padding: 200px 5vw;
-  background-color: #333; }
+  color: white;
+  background-color: #333;
+  transition: opacity 1s; }
+  #contact .links {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    padding: 0 10px; }
+    #contact .links a {
+      padding: 20px; }
+      #contact .links a i {
+        color: #2c97fc;
+        font-size: 45px;
+        transition: color 0.3s; }
+      #contact .links a:hover {
+        cursor: pointer; }
+        #contact .links a:hover i {
+          color: white; }
 
 footer {
-  background-color: #222;
+  background-color: #1a1a1a;
   min-height: 200px;
   width: 100%;
   color: #666; }
@@ -259,7 +301,8 @@ footer {
     overflow: hidden;
     text-align: center; }
     footer .container a {
-      color: #2457fd; }
+      color: #2c97fc;
+      text-decoration: none; }
 
 @media screen and (max-width: 1100px) {
   .hello {
@@ -267,15 +310,23 @@ footer {
     text-align: left;
     transform: translateY(-50%); }
   #contact h2 {
-    font-size: 4vw; } }
+    font-size: 4vw; }
+  #about p {
+    text-align: justify; }
+  #about .flex {
+    width: 70vw; } }
 
 @media screen and (max-width: 786px) {
   .flex .content .skills {
-    flex-direction: column; } }
+    flex-direction: column; }
+    .flex .content .skills ul {
+      margin: 0 auto; }
+  #about .flex {
+    width: 80vw; } }
 
 @media screen and (max-width: 540px) {
   h1 {
-    font-size: 36px; }
+    font-size: 50px; }
   #popup {
     font-size: 16px; }
     #popup #popupcontent .viewlang .view {
@@ -287,10 +338,21 @@ footer {
         margin: 5px auto; }
     #popup #popupcontent p {
       padding: 10px; }
-  #portfolio div {
-    height: 24vh;
+  nav a i, #contact .links a i {
+    font-size: 34px; }
+  nav a {
+    padding: 14px; }
+  #portfolio {
+    width: 90%; }
+  #portfolio .projects {
+    height: 28vh;
     width: 94vw; }
-    #portfolio div:after {
-      padding: 10vh 0; }
+    #portfolio .projects .over {
+      padding: 5vh 0 0 0; }
   .hello {
-    font-size: 54px; } }
+    font-size: 54px; }
+  #contact h2 {
+    font-weight: 300;
+    font-size: 5vw; }
+  #about .flex {
+    width: 90vw; } }

@@ -7,10 +7,10 @@
   <title>Abrar Shahriar Hossain</title>
   <link rel="stylesheet" href="./css/main.css">
   <style>
-   @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap');;    
+    @import url('https://fonts.googleapis.com/css?family=Heebo:100,300&display=swap');    
     body,html {
-      font-family: 'Roboto Mono', monospace;
-      font-weight: 300;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 100;
     }
   </style>
   <script src="https://kit.fontawesome.com/100921f192.js" crossorigin="anonymous"></script>
@@ -27,48 +27,70 @@
   </div>
   <!--END OF Portfolio popup content-->
   
-  <nav>
-    <a href="https://twitter.com/AbrarShahriarH1" target="_blank">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://github.com/Abrar74774" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-  </nav>
-  <div id="homepic">
-    <div class="homepic-overlay">
+  
+  <div class="homepic">
+    <div class="homepic-overlay" >
+      <nav>
+        <a href="https://twitter.com/AbrarShahriarH1" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/Abrar74774" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </nav>
       <h1 class="hello">
         Hello. I'm <span>Abrar Shahriar Hossain</span><br>
         I'm A Frontend Web Developer.
       </h1>        
     </div> 
   </div>
-  <h1 style="margin-top:100px;">Projects</h1>
-  <div id="portfolio">
-    
-      <div id="a" style="background-image: url('./img/reactweatherapp2.png');"></div> 
-    
-    
-      <div id="b" style="background-image: url('./img/dict.jpg');"></div>
-    
-    
-      <div id="c" style="background-image: url('./img/clock.jpg');"></div> 
-    
-    
-      <div id="d" style="background-image: url('./img/const.jpg');"></div> 
-    
-    
-      <div id="e" style="background-image: url('./img/wc.jpg');"></div> 
-    
-    
-      <div id="f" style="background-image: url('./img/rest.jpg');"></div> 
+
+
+  <h1 id="proj" style="margin-top:100px;">Projects</h1>
+  <div id="portfolio">    
+    <div class="projects" id="a" style="background-image: url('./img/reactweatherapp2.png');">
+      <div class="over">
+        <h2>React Weather App</h2>
+        <div class="learn-more">React, API, CSS, HTML</div>
+      </div>
+    </div>    
+    <div class="projects" id="b" style="background-image: url('./img/dict.jpg');">
+      <div class="over">
+        <h2>Dictionary App</h2>
+        <div class="learn-more">Javascript, API, CSS, HTML</div>
+      </div>
+    </div>   
+    <div class="projects" id="c" style="background-image: url('./img/clock.jpg');">
+      <div class="over">
+        <h2>Javascript Clock</h2>
+        <div class="learn-more">Javascript, CSS, HTML</div>
+      </div>
+    </div>    
+    <div class="projects" id="d" style="background-image: url('./img/const.jpg');">
+      <div class="over">
+        <h2>Construction Website</h2>
+        <div class="learn-more">CSS, Javascript, HTML</div>
+      </div>
+    </div>    
+    <div class="projects" id="e" style="background-image: url('./img/wc.jpg');">
+      <div class="over">
+        <h2>Word Counter App</h2>
+        <div class="learn-more">Javascript, CSS, HTML</div>
+      </div>
+    </div>    
+    <div class="projects" id="f" style="background-image: url('./img/rest.jpg');">
+      <div class="over">
+        <h2>Restaurant Website</h2>
+        <div class="learn-more">CSS, Javascript, HTML</div>
+      </div>
+    </div> 
   </div>    
   <div id="about">
     <h1>About Me</h1>    
     <div class="flex">      
       <div class="content">
         <p>
-          I'm a passionate self-taught Frontend Web Developer. I love creating beautiful and responsive web pages and web apps from scratch. Aside from developing, I like gaming, especially racing games.
+          I'm a passionate self-taught Frontend Web Developer. I love coding, creating beautiful and responsive web pages and web apps from scratch. Aside from developing, I like gaming, especially racing games. 
         </p> 
         <h2>My Skills</h2>
         <div class="skills fa-ul">
@@ -91,8 +113,16 @@
     </div>  
   </div>    
   <div id="contact">
-    <h1>Want to work together? Email me!</h1>
+    <h1>Get In Touch</h1>
     <h2>Email address: abrarshahriarhossain@gmail.com</h2>
+    <div class="links">
+      <a href="https://twitter.com/AbrarShahriarH1" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/Abrar74774" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </div>
   <footer>
     <div class="container">
@@ -100,6 +130,10 @@
     </div>
   </footer>
   <script src="./js/portfolio.js"></script>
-  <script src="./js/scripts.js"></script>  
+  <script src="./js/scripts.js"></script> 
+  <script src="./js/rellax.min.js"></script>
+  <script>
+    var rellax = new Rellax('.rellax');
+  </script> 
 </body>
 </html>
