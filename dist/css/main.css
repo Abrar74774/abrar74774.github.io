@@ -171,7 +171,9 @@ nav {
   width: 100%;
   font-weight: 100;
   font-size: 3.5rem;
-  line-height: 1.1; }
+  line-height: 1.1;
+  opacity: 0;
+  transition: opacity 2.5s; }
   .hello span {
     color: #2c97fc;
     font-weight: 400; }
@@ -185,7 +187,7 @@ nav {
 #portfolio {
   opacity: 0;
   display: flex;
-  width: 70vw;
+  width: 95vw;
   margin: 20px auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -345,14 +347,20 @@ footer {
   #portfolio {
     width: 90%; }
   #portfolio .projects {
-    height: 28vh;
+    height: 180px;
     width: 94vw; }
     #portfolio .projects .over {
       padding: 5vh 0 0 0; }
   .hello {
     font-size: 54px; }
+  #contact {
+    padding: 100px 5vw; }
   #contact h2 {
     font-weight: 300;
     font-size: 5vw; }
   #about .flex {
     width: 90vw; } }
+
+@media screen and (min-width: 1740px) {
+  #portfolio {
+    width: 70vw; } }

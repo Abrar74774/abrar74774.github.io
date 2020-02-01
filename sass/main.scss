@@ -1,0 +1,490 @@
+
+
+
+$sec-col:rgb(44, 151, 252);
+$sec-col-hover:rgb(110, 182, 248);
+$transition-time: 0.3s;
+
+
+//-------Universal--------
+* {box-sizing: border-box;}
+
+::selection {
+    background-color: $sec-col;
+    color:white;
+}
+
+::-webkit-scrollbar-track {    
+    background: #000000;   
+}
+
+body,html {
+    background-color: #222;
+    color: white;
+    min-height: 100%;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+}
+
+body {
+    min-height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 100;
+    margin-bottom: 0;
+    // &:after {
+    //     display: block;
+    //     content: "";
+    //     background-color: $sec-col;
+    //     height:8px;
+    //     width:70px;
+    //     margin: 5px auto 0;
+    // }
+}
+
+h2 {    
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+
+#overlay {
+    background-color: black;
+    opacity: 0;
+    transition: opacity $transition-time;
+    -webkit-transition: opacity $transition-time;
+    position: fixed;
+    z-index: -999;
+    height: 100%;
+    width: 100%;
+}
+//===================++POPUP====================
+#popup {
+    height:80%;
+    width:90%;
+    background-color: #222;
+    padding:5% 5vw;
+    position: fixed;
+    right:5%;
+    top:10%;
+    z-index: -9;
+    opacity: 0;
+    transition: opacity $transition-time;
+    -webkit-transition: opacity $transition-time;
+    font-size: 18px;
+    #close {
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        line-height: 1;
+        border-radius: 20px;
+        background-color: #ffffff10;
+        margin:20px;
+        font-size: 25px;
+        position: absolute;
+        right: 0;
+        top:0;
+        cursor: pointer;
+    }
+    #popupcontent {
+        height: 100%;
+        overflow-y: auto;
+        h2 {
+            margin-top:15px;
+            margin-bottom: 15px;
+        }
+        .viewlang {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: auto;            
+            .view {
+                background-size: cover;
+                background-position: center;
+                height: 310px;
+                width:600px;
+            }
+            .lang {
+                margin:0 0 0 0.3vw;
+                height: auto;
+                width:300px;
+                padding:0 20px;
+                a {
+                    text-decoration: none;
+                    font-weight: 300;
+                    text-align: center;
+                    display: inline-block;
+                    width:250px;
+                    height: auto;
+                    padding: 5px 10px;
+                    margin: 5px 0;
+                    background-color: $sec-col;
+                    color: white;
+                    transition: background-color $transition-time;
+                    &:hover {
+                        background-color: $sec-col-hover;
+                    }
+                }
+            }
+        }
+        p {
+            text-align: center;
+            margin-top: 40px;
+            padding: 0 50px;
+        }
+    }   
+}
+//========== NAVBAR ==============
+nav {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    height:80px;
+    width: 100%;
+    margin-bottom: -80px;
+    padding: 0 10px;
+    a {
+        padding:20px;
+        i {
+            color: $sec-col;
+            font-size: 45px;
+            transition: color $transition-time;            
+        }
+        &:hover {
+            i {
+                color: white;
+            }            
+            cursor: pointer;
+        }
+    }
+    
+}
+
+//===========  HOME  ==============
+
+.homepic-overlay {
+    background-color: #0000008d;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+}
+
+.homepic {
+    z-index: 4;
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden; 
+    background-color: #222;   
+    &:before {
+        content: "";
+        margin: 0 auto;
+        filter: blur(0.17rem);
+        background: {            
+            image: url("../img/coding.png"),;
+            size: cover;
+            position: center ;
+        }
+        width:102%;
+        height: 100%;
+        position: absolute;     
+    }
+}
+.hello {
+    text-align: center;
+    color: white;    
+    position: absolute;
+    top:50%;
+    transform: translateY(-100%);
+    z-index: 1;
+    width:100%;
+    font-weight: 100;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    opacity: 0;
+    transition: opacity 2.5s;
+    span {
+        color:$sec-col;
+        font-weight: 400;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+//=================================== PROJECTS ===========================================
+#proj {opacity: 0;transition: opacity 1s;}
+#portfolio {
+    opacity: 0;
+    display:flex;
+    width:95vw;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity 1s;
+    .projects {
+        width:400px;
+        height:250px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 0;
+        margin: 7px;
+        box-shadow: 4px 4px 16px rgba(0,0,0,0.6);
+        transition: all $transition-time;
+        &:hover {
+            transform: scale(1.02);
+        }
+        .over {
+            margin: 0;
+            padding:65px 0 0 0;
+            color: white; 
+            background-color: $sec-col;
+            opacity: 0; 
+            text-align: center;
+            width:100%;
+            height:100%;
+            position: absolute;
+            top:0px;
+            left: 0;
+            transition: opacity $transition-time; 
+            &:hover {            
+                opacity: 1;
+                cursor: pointer;
+            }
+            
+            h2 {
+                font-size: 34px;
+                margin:20px 0 0 0;
+            } 
+            h3 {
+                margin: 0 5px;
+            }
+            .learn-more {
+                height: 50px;
+                font-size: 18px;
+                font-weight: 300;
+                text-align: center;
+                padding:10px;
+                margin:0 auto;
+            }
+        }
+    }
+}
+
+//================= About ===================
+#about {
+    opacity: 0;
+    width:100%;
+    // height:auto;
+    margin:80px auto;
+    padding:80px 0;
+    transition: opacity 0.7s;
+    background-color: #222;
+}
+
+.flex {
+    display:flex;
+    width:50vw;
+    margin: 1px auto;
+    height: auto;
+    .content {
+        flex:5;
+        padding:10px 0;
+        height: auto;
+        p {
+            text-align:justify;
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            height: auto;
+            ul {
+                margin: 1px 5vw;
+                position: relative;    
+                list-style-type: none; 
+                width:125px;
+                li span i {
+                    color: $sec-col;
+                } 
+            }
+        }
+    }
+    // .pic {
+    //     height:260px;
+    //     width:260px;
+    //     border: 4px solid $sec-col;
+    //     background: {
+    //         image:url("/dist/img/me.jpg");
+    //         size:contain;
+    //         repeat:no-repeat;
+    //         position: center;
+    //     }
+    //     border-radius: 50%;
+    // }
+}
+
+//==================== Contact ===================
+#contact {
+    opacity: 0;
+    padding:200px 5vw;
+    color: white;
+    background-color: #333;
+    transition: opacity 1s;  
+    .links {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        background-color: transparent;
+        height:80px;
+        width: 100%;
+        padding: 0 10px;
+        a {
+            padding:20px;
+            i {
+                color: $sec-col;
+                font-size: 45px;
+                transition: color $transition-time;            
+            }
+            &:hover {
+                i {
+                    color: white;
+                }            
+                cursor: pointer;
+            }
+        }
+        
+    } 
+}
+
+//===================== Footr =======================
+
+footer {
+    background-color: #1a1a1a;
+    min-height:200px;
+    width: 100%;
+    color: #666;
+    .container {
+        height:inherit;
+        width:70%;
+        margin:0 auto;
+        padding:85px 0;
+        overflow: hidden;
+        text-align: center;
+        a {
+            color: $sec-col;
+            text-decoration: none;
+        };
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .hello {
+        font-size:65px;
+        text-align: left;
+        transform: translateY(-50%);
+    }
+    #contact h2 {
+        font-size: 4vw;
+    }
+    #about p {
+        text-align: justify;
+    }
+    #about .flex {
+        width:70vw;
+    }
+}
+
+@media screen and (max-width:786px) {
+    .flex .content .skills {
+        flex-direction: column;
+        ul {
+            margin: 0 auto;
+        }
+    }
+    #about .flex {
+        width:80vw;
+    }    
+}
+//================ MOBILE ========================
+@media screen and (max-width:540px) {
+    h1 {
+        font-size: 50px;
+    }
+    #popup {
+        font-size: 16px;
+        #popupcontent {
+            .viewlang {
+                .view {
+                    height: 20vh ;
+                }
+                .lang {
+                    width:70% ;
+                    a {
+                        width: 150px ;
+                        margin: 5px auto ;
+                    }
+                }
+            }
+            p {padding:10px;}
+        }
+    }
+    
+    nav a i, #contact .links a i {
+        font-size: 34px;
+    }
+    nav a {
+        padding: 14px;
+    }
+    #portfolio {
+        width:90%;
+    }
+    #portfolio .projects {
+        height: 180px;
+        width: 94vw;
+        .over {
+            padding: 5vh 0 0 0;
+        }    
+    }
+    .hello {
+        font-size: 54px;
+    }
+    #contact {
+        padding:100px 5vw;
+    }
+    #contact h2 {
+        font-weight: 300;
+        font-size: 5vw;
+    }
+    #about .flex {
+        width:90vw;
+    }
+}
+
+//================= WIDESCREEN ====================
+
+@media screen and (min-width:1740px) {
+    #portfolio {
+        width: 70vw;
+    }
+}

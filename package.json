@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass/ -o dist/css/ --recursive"
+  },
+  "author": "Abrar Shahriar Hossain",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.13.0",
+    "rellax": "^1.10.0"
+  }
+}
