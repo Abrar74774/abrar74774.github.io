@@ -6,7 +6,7 @@ var fi4 = document.getElementById("contact");
 
 // Intersection Observer========
 var options = {
-    rootMargin: '-45%',
+    rootMargin: '-33%',
 }
 
 var observer = new IntersectionObserver(function(entries) {
