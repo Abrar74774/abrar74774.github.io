@@ -1,7 +1,7 @@
 var div = document.getElementById('popupcontent');
 var popup = document.getElementById("popup");
 var overlay = document.getElementById("overlay");
-var close = document.getElementById("close");
+
 
 
 //================================== Portfolio menu divs==============================================
@@ -17,25 +17,33 @@ var div6 = document.getElementById("f");
 //===================================Function=========================================================
 
 function popupEffect(data)  {
-  div.innerHTML = 
+  console.log(data);
+  popup.innerHTML = 
 
-      `<h2>${data.title}</h2>
-      <div class="viewlang">
+      `
+      <div id="close">&times;</div>
+      <div class="content">
         <div class="view" style="background-image:url('${data.img}');"></div>
-        <div class="lang">
+        <div class="lang" data-simplebar >
+          <h2>${data.title}</h2>
           <h3>Technologies used:</h3>
           <ul>
             ${data.lang.map(lang =>'<li>' + lang + '</li>').join('')}
           </ul>
           <br>
           <a href="${data.site}">Visit Site</a><a href="${data.source}">View Source on GitHub</a>
+          <p>${data.description}</p>
         </div>
       </div>
-      <p>${data.description}</p>` ;
+      ` ;
   popup.style.zIndex = '99999999';
   popup.style.opacity = '1'; 
   overlay.style.zIndex = '3';
   overlay.style.opacity='0.7';
+  //popupclose====
+  var close = document.getElementById("close");
+  close.addEventListener("click", closepopup);
+  //==============
 };
 
 
@@ -66,6 +74,7 @@ div6.addEventListener("click", function() {
 
 function closepopup() {
   
+  console.log("closing attempted")
   overlay.style.opacity = '0';
   setTimeout(function(){
     popup.style.zIndex = '-9';
@@ -74,14 +83,14 @@ function closepopup() {
   popup.style.opacity = '0';
 }
 overlay.addEventListener("click", closepopup);
-close.addEventListener("click", closepopup);
+
 
 
 // =================================Individual Project Data=================================================
 
 var data1 = {
   title:"React Weather App",
-  lang:["React","REST API(Darksky and arcgis)", "CSS", "HTML"],
+  lang:["React","Rest API", "CSS", "HTML"],
   site:"https://abrar74774.github.io/ReactWeatherApp",
   source:"https://github.com/Abrar74774/ReactWeatherApp",
   description:"This is an app, where user enters the location or location coordinates, and the app displays current temperature of the location with highest and lowest temperature of the day, along with those of the next five days.<br><br>The app is built with React. It uses fetch API for fetching data from arcgis autocomplete REST API, and searches weather data from DarkSky API, and displays it. It uses React Router for showing two pages of the app.",

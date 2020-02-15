@@ -41,7 +41,7 @@ ul {
   padding: 0 0 0 20px; }
 
 #overlay {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   opacity: 0;
   transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
@@ -51,13 +51,14 @@ ul {
   width: 100%; }
 
 #popup {
-  height: 80%;
-  width: 90%;
+  height: 33vw;
+  width: 85%;
   background-color: #222;
-  padding: 5% 5vw;
+  box-shadow: 30px 30px 120px 50px #000000ca;
   position: fixed;
-  right: 5%;
-  top: 10%;
+  right: 7.5%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -9;
   opacity: 0;
   transition: opacity 0.3s;
@@ -68,53 +69,49 @@ ul {
     width: 30px;
     text-align: center;
     line-height: 1;
-    border-radius: 20px;
-    background-color: #ffffff10;
+    border-radius: 2px;
     margin: 20px;
     font-size: 25px;
     position: absolute;
+    z-index: 1;
     right: 0;
     top: 0;
     cursor: pointer; }
-  #popup #popupcontent {
+  #popup .content {
     height: 100%;
-    overflow-y: auto; }
-    #popup #popupcontent h2 {
-      margin-top: 15px;
-      margin-bottom: 15px; }
-    #popup #popupcontent .viewlang {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      height: auto; }
-      #popup #popupcontent .viewlang .view {
-        background-size: cover;
-        background-position: center;
-        height: 310px;
-        width: 600px; }
-      #popup #popupcontent .viewlang .lang {
-        margin: 0 0 0 0.3vw;
+    display: flex;
+    justify-content: center;
+    height: 100%; }
+    #popup .content .view {
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      width: 75%; }
+    #popup .content .lang {
+      margin: 30px 60px 60px 30px;
+      padding: 0 30px 30px;
+      height: auto;
+      width: 25%; }
+      #popup .content .lang h2 {
+        margin-top: 15px;
+        margin-bottom: 50px; }
+      #popup .content .lang a {
+        text-decoration: none;
+        font-weight: 300;
+        text-align: center;
+        display: inline-block;
+        width: 250px;
         height: auto;
-        width: 300px;
-        padding: 0 20px; }
-        #popup #popupcontent .viewlang .lang a {
-          text-decoration: none;
-          font-weight: 300;
-          text-align: center;
-          display: inline-block;
-          width: 250px;
-          height: auto;
-          padding: 5px 10px;
-          margin: 5px 0;
-          background-color: #2c97fc;
-          color: white;
-          transition: background-color 0.3s; }
-          #popup #popupcontent .viewlang .lang a:hover {
-            background-color: #6eb6f8; }
-    #popup #popupcontent p {
-      text-align: center;
-      margin-top: 40px;
-      padding: 0 50px; }
+        padding: 5px 10px;
+        margin: 5px 0;
+        background-color: #2c97fc;
+        color: white;
+        transition: background-color 0.3s; }
+        #popup .content .lang a:hover {
+          background-color: #6eb6f8; }
+  #popup p {
+    text-align: justify;
+    margin-top: 40px; }
 
 nav {
   display: flex;
@@ -147,7 +144,7 @@ nav {
 .homepic {
   z-index: 4;
   position: relative;
-  height: 100vh;
+  height: 95vh;
   overflow-x: hidden;
   background-color: #222; }
   .homepic:before {
@@ -306,6 +303,42 @@ footer {
       color: #2c97fc;
       text-decoration: none; }
 
+@media screen and (min-width: 1740px) {
+  #portfolio {
+    width: 70vw; }
+  #popup {
+    height: 33vw; } }
+
+@media screen and (max-width: 1439px) {
+  #popup {
+    height: 90%;
+    width: 70%;
+    right: 15%; }
+    #popup .content {
+      flex-direction: column; }
+      #popup .content .lang {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        display: flex; }
+        #popup .content .lang h2 {
+          margin: 15px auto 10px; }
+        #popup .content .lang h3 {
+          text-align: center; }
+        #popup .content .lang ul {
+          width: 200px;
+          margin: 0 auto; }
+        #popup .content .lang a {
+          display: block;
+          margin: 10px auto;
+          width: 100%; }
+        #popup .content .lang p {
+          width: 65%;
+          margin: 40px auto 20px; }
+      #popup .content .view {
+        width: 100%;
+        height: 50%; } }
+
 @media screen and (max-width: 1100px) {
   .hello {
     font-size: 65px;
@@ -324,22 +357,40 @@ footer {
     .flex .content .skills ul {
       margin: 0 auto; }
   #about .flex {
-    width: 80vw; } }
+    width: 80vw; }
+  #popup {
+    width: 90%;
+    right: 5%; }
+  .homepic {
+    height: 85vh; } }
 
 @media screen and (max-width: 540px) {
   h1 {
-    font-size: 50px; }
+    font-size: 35px; }
+  h2 {
+    font-size: 25px; }
+  body {
+    font-size: 18px; }
+  .homepic:before {
+    background-position: left; }
   #popup {
-    font-size: 16px; }
-    #popup #popupcontent .viewlang .view {
-      height: 20vh; }
-    #popup #popupcontent .viewlang .lang {
-      width: 70%; }
-      #popup #popupcontent .viewlang .lang a {
-        width: 150px;
-        margin: 5px auto; }
-    #popup #popupcontent p {
-      padding: 10px; }
+    font-size: 16px;
+    width: 95%;
+    right: 2.5%; }
+    #popup #close {
+      color: black;
+      background-color: #ffffff55;
+      margin: 7px;
+      font-weight: 300; }
+    #popup .content {
+      overflow-y: hidden;
+      flex-wrap: wrap; }
+      #popup .content .view {
+        height: 200px; }
+      #popup .content .lang {
+        height: calc(100% - 200px); }
+        #popup .content .lang p {
+          width: 90%; }
   nav a i, #contact .links a i {
     font-size: 34px; }
   nav a {
@@ -352,7 +403,8 @@ footer {
     #portfolio .projects .over {
       padding: 5vh 0 0 0; }
   .hello {
-    font-size: 54px; }
+    font-size: 54px;
+    top: 45%; }
   #contact {
     padding: 100px 5vw; }
   #contact h2 {
@@ -360,7 +412,3 @@ footer {
     font-size: 5vw; }
   #about .flex {
     width: 90vw; } }
-
-@media screen and (min-width: 1740px) {
-  #portfolio {
-    width: 70vw; } }
