@@ -67,11 +67,14 @@ ul {
   #popup #close {
     height: 30px;
     width: 30px;
+    color: black;
+    background-color: #ffffff55;
     text-align: center;
-    line-height: 1;
+    line-height: 1.15;
     border-radius: 2px;
     margin: 20px;
     font-size: 25px;
+    font-weight: 300;
     position: absolute;
     z-index: 1;
     right: 0;
