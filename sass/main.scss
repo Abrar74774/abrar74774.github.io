@@ -1,8 +1,8 @@
 
 
 
-$sec-col:rgb(44, 151, 252);
-$sec-col-hover:rgb(110, 182, 248);
+$sec-col:rgb(6, 226, 255);
+$sec-col-hover:rgb(205, 230, 253);
 $transition-time: 0.3s;
 
 
@@ -19,7 +19,7 @@ $transition-time: 0.3s;
 }
 
 body,html {
-    background-color: #222;
+    background-color: #121212;
     color: white;
     min-height: 100%;
     width:100%;
@@ -79,7 +79,7 @@ ul {
 #popup {
     height:33vw;
     width:85%;
-    background-color: #222;
+    background-color: #1b1b1b;
     box-shadow: 30px 30px 120px 50px #000000ca;
     position: fixed;
     right:7.5%;
@@ -136,11 +136,11 @@ ul {
                 height: auto;
                 padding: 5px 10px;
                 margin: 5px 0;
-                background-color: $sec-col;
+                background-color: #282828;
                 color: white;
                 transition: background-color $transition-time;
                 &:hover {
-                    background-color: $sec-col-hover;
+                    background-color: #333;
                 }
             }
         }
@@ -243,6 +243,7 @@ nav {
     .projects {
         width:400px;
         height:250px;
+        border-radius: 6px;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -250,29 +251,27 @@ nav {
         margin: 7px;
         box-shadow: 4px 4px 16px rgba(0,0,0,0.6);
         transition: all $transition-time;
-        &:hover {
-            transform: scale(1.02);
-        }
         .over {
+            border-radius: 4px;
             margin: 0;
             padding:65px 0 0 0;
             color: white; 
-            background-color: $sec-col;
-            opacity: 0; 
+            background-color: #191919;
+            opacity: 1; 
             text-align: center;
             width:100%;
             height:100%;
             position: absolute;
             top:0px;
             left: 0;
-            transition: opacity $transition-time; 
+            transition: background-color $transition-time; 
             &:hover {            
-                opacity: 1;
+                background-color: #222222bb;
                 cursor: pointer;
             }
             
             h2 {
-                font-size: 34px;
+                font-size: 30px;
                 margin:20px 0 0 0;
             } 
             h3 {
@@ -280,11 +279,12 @@ nav {
             }
             .learn-more {
                 height: 50px;
-                font-size: 18px;
+                font-size: 17px;
                 font-weight: 300;
                 text-align: center;
                 padding:10px;
                 margin:0 auto;
+                color:$sec-col;
             }
         }
     }
@@ -298,7 +298,7 @@ nav {
     margin:80px auto;
     padding:80px 0;
     transition: opacity 0.7s;
-    background-color: #222;
+    background-color: #121212;
 }
 
 .flex {
@@ -307,7 +307,8 @@ nav {
     margin: 1px auto;
     height: auto;
     .content {
-        flex:5;
+        // flex:5;
+        min-width: 0;
         padding:10px 0;
         height: auto;
         p {
@@ -347,7 +348,7 @@ nav {
     opacity: 0;
     padding:200px 5vw;
     color: white;
-    background-color: #333;
+    background-color: #222;
     transition: opacity 1s;  
     .links {
         display: flex;
@@ -379,7 +380,7 @@ nav {
 //===================== Footr =======================
 
 footer {
-    background-color: #1a1a1a;
+    background-color: #0f0f0f;
     min-height:200px;
     width: 100%;
     color: #666;
@@ -469,7 +470,6 @@ footer {
 
 @media screen and (max-width:786px) {
     .flex .content .skills {
-        flex-direction: column;
         ul {
             margin: 0 auto;
         }
@@ -532,11 +532,14 @@ footer {
         width: 94vw;
         .over {
             padding: 5vh 0 0 0;
+            h2 {font-size: 24px;}
+            .learn-more {font-size: 15px;}
         }    
     }
     .hello {
-        font-size: 54px;
+        font-size: 48px;
         top:45%;
+        padding: 0 30px;
     }
     #contact {
         padding:100px 5vw;
@@ -545,9 +548,16 @@ footer {
         font-weight: 300;
         font-size: 5vw;
     }
-    #about .flex {
-        width:90vw;
-    }
+    #about .flex ul {padding: 0;}
+    // #about .flex {
+    //     width:90vw;
+    //     .content .skills {
+    //         flex-direction: row;
+    //     }
+    //     ul {padding: 0;}
+    //     ul:not(:last-child) {margin:0 30px 0 0;}
+        
+    // }
 }
 
 
