@@ -3,7 +3,7 @@
 
 ::selection {
   background-color: #06e2ff;
-  color: white; }
+  color: black; }
 
 ::-webkit-scrollbar-track {
   background: #000000; }
@@ -67,8 +67,8 @@ ul {
   #popup #close {
     height: 30px;
     width: 30px;
-    color: black;
-    background-color: #ffffff55;
+    color: #dfdfdf;
+    background-color: #ffffff00;
     text-align: center;
     line-height: 1.15;
     border-radius: 2px;
@@ -201,7 +201,7 @@ nav {
     position: relative;
     padding: 0;
     margin: 7px;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s; }
     #portfolio .projects .over {
       border-radius: 4px;
@@ -269,7 +269,7 @@ nav {
   opacity: 0;
   padding: 200px 5vw;
   color: white;
-  background-color: #222;
+  background-color: #1a1a1a;
   transition: opacity 1s; }
   #contact .links {
     display: flex;
@@ -318,6 +318,9 @@ footer {
     height: 90%;
     width: 70%;
     right: 15%; }
+    #popup #close {
+      background-color: #1b1b1b;
+      color: #dfdfdf; }
     #popup .content {
       flex-direction: column; }
       #popup .content .lang {
@@ -380,8 +383,6 @@ footer {
     width: 95%;
     right: 2.5%; }
     #popup #close {
-      color: black;
-      background-color: #ffffff55;
       margin: 7px;
       font-weight: 300; }
     #popup .content {

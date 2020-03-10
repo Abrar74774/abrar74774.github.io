@@ -1,7 +1,7 @@
 
 
 
-$sec-col:rgb(6, 226, 255);
+$sec-col:#06e2ff;
 $sec-col-hover:rgb(205, 230, 253);
 $transition-time: 0.3s;
 
@@ -11,7 +11,7 @@ $transition-time: 0.3s;
 
 ::selection {
     background-color: $sec-col;
-    color:white;
+    color:black;
 }
 
 ::-webkit-scrollbar-track {    
@@ -75,7 +75,8 @@ ul {
     height: 100%;
     width: 100%;
 }
-//==============\\\\\\\\POPUP///////====================
+//==============\/\/\/\/\/\/\/\/ POPUP \/\/\/\/\/\/\====================
+
 #popup {
     height:33vw;
     width:85%;
@@ -93,8 +94,8 @@ ul {
     #close {
         height: 30px;
         width: 30px;
-        color: black;
-        background-color: #ffffff55;
+        color: #dfdfdf;
+        background-color: #ffffff00;
         text-align: center;
         line-height: 1.15;
         border-radius: 2px;
@@ -249,7 +250,7 @@ nav {
         position: relative;
         padding: 0;
         margin: 7px;
-        box-shadow: 4px 4px 16px rgba(0,0,0,0.6);
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
         transition: all $transition-time;
         .over {
             border-radius: 4px;
@@ -348,7 +349,7 @@ nav {
     opacity: 0;
     padding:200px 5vw;
     color: white;
-    background-color: #222;
+    background-color: #1a1a1a;
     transition: opacity 1s;  
     .links {
         display: flex;
@@ -418,6 +419,7 @@ footer {
         height:90%;
         width:70%;
         right: 15%;
+        #close {background-color:#1b1b1b;color:#dfdfdf;}
         .content {
             flex-direction: column;
             .lang {
@@ -486,9 +488,7 @@ footer {
 //================ MOBILE ========================
 @media screen and (max-width:540px) {
     h1 {font-size:35px;}
-    h2 {
-        font-size: 25px;
-    }
+    h2 {font-size: 25px;}
     body {font-size: 18px;}
     .homepic:before {
         background-position: left;
@@ -498,8 +498,6 @@ footer {
         width: 95%;
         right: 2.5%;
         #close {
-            color: black;
-            background-color: #ffffff55;
             margin:7px;
             font-weight: 300;
         }
