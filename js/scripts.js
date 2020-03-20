@@ -7,10 +7,10 @@ var close = document.getElementById("close");
 
 // Intersection Observer========
 var options = {
-    rootMargin:'-33% 0%'
+    rootMargin: '-33% 0%'
 }
 
-var observer = new IntersectionObserver(function(entries) {
+var observer = new IntersectionObserver(function (entries) {
     console.log(entries);
     if (entries.filter(entry => entry.isIntersecting)) {
         console.log(entries.filter(entry => entry.isIntersecting).map(entry => entry.target.style.opacity = 1))
@@ -26,9 +26,9 @@ observer.observe(fi4);
 //===============================
 
 // Start fade in
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     mainFadeIn.style.opacity = 1;
-    
+
 })
 
 
@@ -44,7 +44,7 @@ window.addEventListener('load', function() {
 // if (width >= 787) {addedScroll2 = 0};
 
 
- 
+
 
 // window.addEventListener('scroll', function() {
 //     console.log(pageYOffset);

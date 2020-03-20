@@ -19,7 +19,7 @@ $transition-time: 0.3s;
 }
 
 body,html {
-    background-color: #121212;
+    background-color: #1a1a1a;
     color: white;
     min-height: 100%;
     width:100%;
@@ -36,7 +36,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 56px;
+    font-size: 50px;
     font-weight: 100;
     margin-bottom: 0;
     // &:after {
@@ -80,7 +80,8 @@ ul {
 #popup {
     height:33vw;
     width:85%;
-    background-color: #1b1b1b;
+    border-radius: 12px;
+    background-color: #222222;
     box-shadow: 30px 30px 120px 50px #000000ca;
     position: fixed;
     right:7.5%;
@@ -90,6 +91,7 @@ ul {
     opacity: 0;
     transition: opacity $transition-time;
     -webkit-transition: opacity $transition-time;
+    overflow: hidden;
     font-size: 18px;
     #close {
         height: 30px;
@@ -161,7 +163,7 @@ nav {
     height:80px;
     width: 100%;
     margin-bottom: -80px;
-    padding: 0 10px;
+    padding: 0;
     a {
         padding:20px;
         i {
@@ -244,20 +246,20 @@ nav {
     .projects {
         width:400px;
         height:250px;
-        border-radius: 6px;
+        border-radius: 15px;
         background-size: cover;
         background-position: center;
         position: relative;
         padding: 0;
-        margin: 7px;
-        box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+        margin: 15px;
+        box-shadow: 0 35px 20px -24px rgba(0, 0, 0, 0.5);
         transition: all $transition-time;
         .over {
-            border-radius: 4px;
+            border-radius: 12px;
             margin: 0;
             padding:65px 0 0 0;
             color: white; 
-            background-color: #191919;
+            background-color: #222222;
             opacity: 1; 
             text-align: center;
             width:100%;
@@ -296,10 +298,8 @@ nav {
     opacity: 0;
     width:100%;
     // height:auto;
-    margin:80px auto;
-    padding:80px 0;
+    padding:100px 0;
     transition: opacity 0.7s;
-    background-color: #121212;
 }
 
 .flex {
@@ -347,9 +347,9 @@ nav {
 //==================== Contact ===================
 #contact {
     opacity: 0;
-    padding:200px 5vw;
+    padding:150px 5vw;
     color: white;
-    background-color: #1a1a1a;
+    background-color: #222;
     transition: opacity 1s;  
     .links {
         display: flex;
@@ -400,6 +400,15 @@ footer {
 }
 
 
+
+
+
+
+
+
+
+
+
 /////////////////////MEDIAQUERIES//////////////////
 
 //================= WIDESCREEN ====================
@@ -415,6 +424,8 @@ footer {
 //======================================================
 
 @media screen and (max-width:1439px) {
+    h1 {font-size: 40px;}
+    h2 {font-size: 25px;}
     #popup {
         height:90%;
         width:70%;
@@ -451,13 +462,19 @@ footer {
             }
         }
     }
+    .hello {
+        font-size: 55px;
+    }
+    nav a {padding:10px;}
+    nav a i {
+        font-size: 35px;
+    }
 }
 
 @media screen and (max-width:1100px) {
     .hello {
-        font-size:65px;
-        text-align: left;
-        transform: translateY(-50%);
+        font-size:50px;
+        transform: translateY(-100%);
     }
     #contact h2 {
         font-size: 4vw;
@@ -483,13 +500,15 @@ footer {
         width: 90%;
         right:5%;
     }
-    .homepic {height: 85vh;}   
+    .homepic {height: 85vh;} 
+    
+    .hello {text-align: left;padding:15px;transform: translateY(-50%);}
 }
 //================ MOBILE ========================
 @media screen and (max-width:540px) {
     h1 {font-size:35px;}
     h2 {font-size: 25px;}
-    body {font-size: 18px;}
+    body {font-size: 18px;}z
     .homepic:before {
         background-position: left;
     }
@@ -517,10 +536,10 @@ footer {
     }
     
     nav a i, #contact .links a i {
-        font-size: 34px;
+        font-size: 30px;
     }
     nav a {
-        padding: 14px;
+        padding: 15px 10px;
     }
     #portfolio {
         width:90%;
@@ -537,7 +556,6 @@ footer {
     .hello {
         font-size: 48px;
         top:45%;
-        padding: 0 30px;
     }
     #contact {
         padding:100px 5vw;
