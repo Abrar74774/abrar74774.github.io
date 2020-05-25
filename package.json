@@ -9,7 +9,6 @@
   "author": "Abrar Shahriar Hossain",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.13.0",
-    "rellax": "^1.10.0"
+    "node-sass": "^4.13.0"
   }
 }
