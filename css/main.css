@@ -2,15 +2,15 @@
   box-sizing: border-box; }
 
 ::selection {
-  background-color: #06e2ff;
+  background-color: #0580C7;
   color: black; }
 
 ::-webkit-scrollbar-track {
   background: #000000; }
 
 body, html {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: #fdfdfd;
+  color: #222;
   min-height: 100%;
   width: 100%;
   padding: 0;
@@ -25,16 +25,16 @@ body {
 h1 {
   text-align: center;
   font-size: 50px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 0; }
 
 h2 {
   text-align: center;
   font-size: 30px;
-  font-weight: 100; }
+  font-weight: 300; }
 
 h3 {
-  font-weight: 100; }
+  font-weight: 300; }
 
 ul {
   margin: 0;
@@ -51,11 +51,11 @@ ul {
   width: 100%; }
 
 #popup {
-  height: 33vw;
+  height: 65%;
   width: 85%;
-  border-radius: 12px;
-  background-color: #222222;
-  box-shadow: 30px 30px 120px 50px #000000ca;
+  border-radius: 20px;
+  background-color: #fdfdfd;
+  box-shadow: 30px 30px 120px 50px #0000004d;
   position: fixed;
   right: 7.5%;
   top: 50%;
@@ -69,7 +69,7 @@ ul {
   #popup #close {
     height: 30px;
     width: 30px;
-    color: #dfdfdf;
+    color: #333;
     background-color: #ffffff00;
     text-align: center;
     line-height: 1.15;
@@ -98,8 +98,7 @@ ul {
       height: auto;
       width: 25%; }
       #popup .content .lang h2 {
-        margin-top: 15px;
-        margin-bottom: 50px; }
+        margin-top: 15px; }
       #popup .content .lang a {
         text-decoration: none;
         font-weight: 300;
@@ -109,14 +108,20 @@ ul {
         height: auto;
         padding: 5px 10px;
         margin: 5px 0;
-        background-color: #282828;
+        background-color: #0580C7;
         color: white;
         transition: background-color 0.3s; }
         #popup .content .lang a:hover {
-          background-color: #333; }
+          background-color: #3c93c5; }
   #popup p {
     text-align: justify;
     margin-top: 40px; }
+
+.tech {
+  color: #0580C7;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto; }
 
 nav {
   display: flex;
@@ -131,7 +136,7 @@ nav {
   nav a {
     padding: 20px; }
     nav a i {
-      color: #06e2ff;
+      color: #0580C7;
       font-size: 45px;
       transition: color 0.3s; }
     nav a:hover {
@@ -171,14 +176,14 @@ nav {
   transform: translateY(-100%);
   z-index: 1;
   width: 100%;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 3.5rem;
   line-height: 1.1;
   opacity: 0;
-  transition: opacity 2.5s; }
+  transition: opacity 1.5s; }
   .hello span {
-    color: #06e2ff;
-    font-weight: 400; }
+    color: #0580C7;
+    font-weight: 300; }
   .hello:after {
     display: none; }
 
@@ -203,14 +208,14 @@ nav {
     position: relative;
     padding: 0;
     margin: 15px;
-    box-shadow: 0 35px 20px -24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 30px -4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s; }
     #portfolio .projects .over {
       border-radius: 12px;
       margin: 0;
       padding: 65px 0 0 0;
-      color: white;
-      background-color: #222222;
+      color: #222222;
+      background-color: #ffffff;
       opacity: 1;
       text-align: center;
       width: 100%;
@@ -218,10 +223,13 @@ nav {
       position: absolute;
       top: 0px;
       left: 0;
-      transition: background-color 0.3s; }
+      transition: background-color 0.3s, color 0.3s; }
       #portfolio .projects .over:hover {
-        background-color: #222222bb;
+        background-color: #0580C7;
+        color: #fdfdfd;
         cursor: pointer; }
+        #portfolio .projects .over:hover .learn-more {
+          color: #fdfdfd; }
       #portfolio .projects .over h2 {
         font-size: 30px;
         margin: 20px 0 0 0; }
@@ -234,7 +242,8 @@ nav {
         text-align: center;
         padding: 10px;
         margin: 0 auto;
-        color: #06e2ff; }
+        color: #0580C7;
+        transition: color 0.3s; }
 
 #about {
   opacity: 0;
@@ -252,7 +261,8 @@ nav {
     padding: 10px 0;
     height: auto; }
     .flex .content p {
-      text-align: justify; }
+      text-align: justify;
+      text-align-last: center; }
     .flex .content .skills {
       display: flex;
       justify-content: center;
@@ -263,13 +273,13 @@ nav {
         list-style-type: none;
         width: 125px; }
         .flex .content .skills ul li span i {
-          color: #06e2ff; }
+          color: #0580C7; }
 
 #contact {
   opacity: 0;
   padding: 150px 5vw;
   color: white;
-  background-color: #222;
+  background-color: #333;
   transition: opacity 1s; }
   #contact .links {
     display: flex;
@@ -283,7 +293,7 @@ nav {
     #contact .links a {
       padding: 20px; }
       #contact .links a i {
-        color: #06e2ff;
+        color: #0580C7;
         font-size: 45px;
         transition: color 0.3s; }
       #contact .links a:hover {
@@ -292,7 +302,7 @@ nav {
           color: white; }
 
 footer {
-  background-color: #0f0f0f;
+  background-color: #222;
   min-height: 200px;
   width: 100%;
   color: #666; }
@@ -304,14 +314,14 @@ footer {
     overflow: hidden;
     text-align: center; }
     footer .container a {
-      color: #06e2ff;
+      color: #0580C7;
       text-decoration: none; }
 
 @media screen and (min-width: 1740px) {
   #portfolio {
     width: 70vw; }
   #popup {
-    height: 33vw; } }
+    height: 65%; } }
 
 @media screen and (max-width: 1439px) {
   h1 {
@@ -322,9 +332,6 @@ footer {
     height: 90%;
     width: 70%;
     right: 15%; }
-    #popup #close {
-      background-color: #1b1b1b;
-      color: #dfdfdf; }
     #popup .content {
       flex-direction: column; }
       #popup .content .lang {
@@ -362,8 +369,6 @@ footer {
     transform: translateY(-100%); }
   #contact h2 {
     font-size: 4vw; }
-  #about p {
-    text-align: justify; }
   #about .flex {
     width: 70vw; } }
 
@@ -432,4 +437,6 @@ footer {
     font-weight: 300;
     font-size: 5vw; }
   #about .flex ul {
-    padding: 0; } }
+    padding: 0; }
+  #about .flex ul:nth-child(2) {
+    margin-left: 50px; } }

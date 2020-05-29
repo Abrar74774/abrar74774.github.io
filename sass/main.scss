@@ -1,8 +1,5 @@
-
-
-
-$sec-col:#06e2ff;
-$sec-col-hover:rgb(205, 230, 253);
+$sec-col:#0580C7;
+$sec-col-hover: rgb(60, 147, 197);
 $transition-time: 0.3s;
 
 
@@ -19,8 +16,8 @@ $transition-time: 0.3s;
 }
 
 body,html {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #fdfdfd;
+    color: #222;
     min-height: 100%;
     width:100%;
     padding: 0;
@@ -37,26 +34,18 @@ body {
 h1 {
     text-align: center;
     font-size: 50px;
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 0;
-    // &:after {
-    //     display: block;
-    //     content: "";
-    //     background-color: $sec-col;
-    //     height:8px;
-    //     width:70px;
-    //     margin: 5px auto 0;
-    // }
 }
 
 h2 {    
     text-align: center;
     font-size: 30px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 h3 {
-    font-weight: 100;
+    font-weight: 300;
 }
 
 ul {
@@ -78,11 +67,11 @@ ul {
 //==============\/\/\/\/\/\/\/\/ POPUP \/\/\/\/\/\/\====================
 
 #popup {
-    height:33vw;
+    height:65%;
     width:85%;
-    border-radius: 12px;
-    background-color: #222222;
-    box-shadow: 30px 30px 120px 50px #000000ca;
+    border-radius: 20px;
+    background-color: #fdfdfd;
+    box-shadow: 30px 30px 120px 50px #0000004d;
     position: fixed;
     right:7.5%;
     top:50%;
@@ -96,7 +85,7 @@ ul {
     #close {
         height: 30px;
         width: 30px;
-        color: #dfdfdf;
+        color: #333;
         background-color: #ffffff00;
         text-align: center;
         line-height: 1.15;
@@ -128,7 +117,6 @@ ul {
             width:25%;
             h2 {
                 margin-top:15px;
-                margin-bottom: 50px;
             }
             a {
                 text-decoration: none;
@@ -139,11 +127,11 @@ ul {
                 height: auto;
                 padding: 5px 10px;
                 margin: 5px 0;
-                background-color: #282828;
+                background-color: $sec-col;
                 color: white;
                 transition: background-color $transition-time;
                 &:hover {
-                    background-color: #333;
+                    background-color: $sec-col-hover;
                 }
             }
         }
@@ -152,6 +140,13 @@ ul {
         text-align: justify;
         margin-top: 40px;
     }       
+}
+
+.tech {
+    color:$sec-col;
+    text-align: center;
+    width:80%;
+    margin:0 auto;
 }
 //========== NAVBAR ==============
 nav {
@@ -219,14 +214,14 @@ nav {
     transform: translateY(-100%);
     z-index: 1;
     width:100%;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 3.5rem;
     line-height: 1.1;
     opacity: 0;
-    transition: opacity 2.5s;
+    transition: opacity 1.5s;
     span {
         color:$sec-col;
-        font-weight: 400;
+        font-weight: 300;
     }
     &:after {
         display: none;
@@ -252,14 +247,14 @@ nav {
         position: relative;
         padding: 0;
         margin: 15px;
-        box-shadow: 0 35px 20px -24px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 30px -4px rgba(0, 0, 0, 0.2);
         transition: all $transition-time;
         .over {
             border-radius: 12px;
             margin: 0;
             padding:65px 0 0 0;
-            color: white; 
-            background-color: #222222;
+            color: #222222; 
+            background-color: #ffffff;
             opacity: 1; 
             text-align: center;
             width:100%;
@@ -267,10 +262,14 @@ nav {
             position: absolute;
             top:0px;
             left: 0;
-            transition: background-color $transition-time; 
+            transition: background-color $transition-time, color $transition-time; 
             &:hover {            
-                background-color: #222222bb;
+                background-color: $sec-col;
+                color: #fdfdfd;
                 cursor: pointer;
+                .learn-more {
+                    color: #fdfdfd;
+                }
             }
             
             h2 {
@@ -288,6 +287,7 @@ nav {
                 padding:10px;
                 margin:0 auto;
                 color:$sec-col;
+                transition: color $transition-time;
             }
         }
     }
@@ -314,6 +314,7 @@ nav {
         height: auto;
         p {
             text-align:justify;
+            text-align-last: center;
         }
         .skills {
             display: flex;
@@ -349,7 +350,7 @@ nav {
     opacity: 0;
     padding:150px 5vw;
     color: white;
-    background-color: #222;
+    background-color: #333;
     transition: opacity 1s;  
     .links {
         display: flex;
@@ -381,7 +382,7 @@ nav {
 //===================== Footr =======================
 
 footer {
-    background-color: #0f0f0f;
+    background-color: #222;
     min-height:200px;
     width: 100%;
     color: #666;
@@ -418,7 +419,7 @@ footer {
         width: 70vw;
     }
     #popup {
-        height:33vw;
+        height:65%;
     }
 }
 //======================================================
@@ -430,7 +431,6 @@ footer {
         height:90%;
         width:70%;
         right: 15%;
-        #close {background-color:#1b1b1b;color:#dfdfdf;}
         .content {
             flex-direction: column;
             .lang {
@@ -478,9 +478,6 @@ footer {
     }
     #contact h2 {
         font-size: 4vw;
-    }
-    #about p {
-        text-align: justify;
     }
     #about .flex {
         width:70vw;
@@ -565,6 +562,8 @@ footer {
         font-size: 5vw;
     }
     #about .flex ul {padding: 0;}
+    #about .flex ul:nth-child(2) {margin-left:50px}
+
     // #about .flex {
     //     width:90vw;
     //     .content .skills {
