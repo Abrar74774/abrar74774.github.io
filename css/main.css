@@ -176,7 +176,7 @@ nav {
   transform: translateY(-100%);
   z-index: 1;
   width: 100%;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 3.5rem;
   line-height: 1.1;
   opacity: 0;
