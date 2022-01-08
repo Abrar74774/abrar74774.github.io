@@ -70,7 +70,7 @@ ul {
 #popup {
   height: 75%;
   width: 85%;
-  background-color: inherit;
+  background-color: #333;
   box-shadow: 30px 30px 120px 50px #0000004d;
   position: fixed;
   right: 7.5%;
@@ -105,8 +105,10 @@ ul {
     justify-content: center;
     height: 100%;
     .view {
-      background-size: cover;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 0 0 10px;
       height: 100%;
       width: 75%;
     }
@@ -127,11 +129,11 @@ ul {
         height: auto;
         padding: 10px 10px;
         margin: 5px 0;
-        background-color: #333;
+        background-color: #444;
         color: inherit;
         transition: background-color $transition-time;
         &:hover {
-          background-color: #444;
+          background-color: #555;
         }
       }
     }
@@ -294,7 +296,7 @@ nav {
   }
 }
 
-//================= About ===================
+//================= ABOUT ===================
 #about {
   margin-top: 80px;
   opacity: 0;
