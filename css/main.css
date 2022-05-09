@@ -25,13 +25,13 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 2rem;
   font-weight: 300;
   margin-bottom: 0; }
 
 h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 300; }
 
 h3 {
@@ -139,7 +139,7 @@ nav {
     padding: 20px; }
     nav a i {
       color: #29dfff;
-      font-size: 45px;
+      font-size: 2rem;
       transition: color 0.3s; }
     nav a:hover {
       cursor: pointer; }
@@ -179,7 +179,7 @@ nav {
   z-index: 1;
   width: 100%;
   font-weight: 100;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1.1;
   opacity: 0;
   transition: opacity 1.5s; }
@@ -230,13 +230,12 @@ nav {
         color: #fdfdfd;
         cursor: pointer; }
       #portfolio .projects .over h2 {
-        font-size: 32px;
         margin: 15px 0 0 0; }
       #portfolio .projects .over h3 {
         margin: 0 5px; }
       #portfolio .projects .over .learn-more {
         height: 50px;
-        font-size: 18px;
+        font-size: 0.8rem;
         font-weight: 400;
         text-align: center;
         padding: 5px;

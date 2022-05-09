@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w sass/ -o ./css/ --recursive"
+    "sass": "node-sass -w ./sass/ -o ./css/ --recursive"
   },
   "author": "Abrar Shahriar Hossain",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.1"
   }
 }
