@@ -26,6 +26,14 @@ let projDivs = [
 
 let data = [
   {
+    title: "RayN Lighting",
+    lang: ["Next.js", "CSSModules"],
+    site: "https://raynlighting.vercel.app/",
+    source: "https://github.com/Abrar74774/raynlighting",
+    description: "Lighting company website example",
+    img: './img/rayn.png'
+  },
+  {
     title: "Angular Data Visualizer",
     lang: ["Angular", "Rest API", "CSS", "HTML"],
     site: "https://abrar74774.github.io/AngularDataVisualizer/",
@@ -64,14 +72,6 @@ let data = [
     source: "https://github.com/Abrar74774/Construction-Website",
     description: "This is a construction company website.<br> The page is designed with CSS, it is responsive, and has some javascript effects.",
     img: './img/const.jpg'
-  },
-  {
-    title: "Word Counter App",
-    lang: ["Javascript", "CSS", "HTML"],
-    site: "https://abrar74774.github.io/Word-Counter",
-    source: "https://github.com/Abrar74774/Word-Counter",
-    description: "This is a Word Counter App built with Javascript.",
-    img: './img/wc.jpg'
   }
 ]
 
