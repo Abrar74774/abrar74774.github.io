@@ -16,7 +16,7 @@ html {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 1.1rem;
   line-height: 1.5;
   position: relative; }
 
@@ -281,6 +281,9 @@ nav {
   color: white;
   background-color: #333;
   transition: opacity 1s; }
+  #contact .email a {
+    text-decoration: none;
+    color: inherit; }
   #contact .links {
     display: flex;
     justify-content: center;
