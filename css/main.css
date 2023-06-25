@@ -205,13 +205,14 @@ nav {
   #portfolio .projects {
     width: 400px;
     height: 250px;
+    opacity: 0;
     background-size: cover;
     background-position: center;
     position: relative;
     padding: 0;
     margin: 15px;
     box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s; }
+    transition: background-color 0.3s; }
     #portfolio .projects .over {
       margin: 0;
       padding: 65px 0 0 0;
@@ -397,7 +398,7 @@ footer {
     font-size: 25px; }
   body {
     font-size: 18px; }
-  z .homepic:before {
+  .homepic:before {
     background-position: left; }
   #popup {
     font-size: 16px;
