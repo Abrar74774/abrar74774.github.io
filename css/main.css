@@ -16,7 +16,7 @@ html {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 1.1rem;
   line-height: 1.5;
   position: relative; }
 
@@ -25,13 +25,13 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 2rem;
   font-weight: 300;
   margin-bottom: 0; }
 
 h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 300; }
 
 h3 {
@@ -54,7 +54,7 @@ ul {
 #popup {
   height: 75%;
   width: 85%;
-  background-color: inherit;
+  background-color: #333;
   box-shadow: 30px 30px 120px 50px #0000004d;
   position: fixed;
   right: 7.5%;
@@ -88,8 +88,10 @@ ul {
     justify-content: center;
     height: 100%; }
     #popup .content .view {
-      background-size: cover;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 0 0 10px;
       height: 100%;
       width: 75%; }
     #popup .content .lang {
@@ -108,11 +110,11 @@ ul {
         height: auto;
         padding: 10px 10px;
         margin: 5px 0;
-        background-color: #333;
+        background-color: #444;
         color: inherit;
         transition: background-color 0.3s; }
         #popup .content .lang a:hover {
-          background-color: #444; }
+          background-color: #555; }
   #popup p {
     text-align: justify;
     margin-top: 40px; }
@@ -137,7 +139,7 @@ nav {
     padding: 20px; }
     nav a i {
       color: #29dfff;
-      font-size: 45px;
+      font-size: 2rem;
       transition: color 0.3s; }
     nav a:hover {
       cursor: pointer; }
@@ -177,7 +179,7 @@ nav {
   z-index: 1;
   width: 100%;
   font-weight: 100;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1.1;
   opacity: 0;
   transition: opacity 1.5s; }
@@ -203,13 +205,14 @@ nav {
   #portfolio .projects {
     width: 400px;
     height: 250px;
+    opacity: 0;
     background-size: cover;
     background-position: center;
     position: relative;
     padding: 0;
     margin: 15px;
     box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s; }
+    transition: background-color 0.3s; }
     #portfolio .projects .over {
       margin: 0;
       padding: 65px 0 0 0;
@@ -228,13 +231,12 @@ nav {
         color: #fdfdfd;
         cursor: pointer; }
       #portfolio .projects .over h2 {
-        font-size: 32px;
         margin: 15px 0 0 0; }
       #portfolio .projects .over h3 {
         margin: 0 5px; }
       #portfolio .projects .over .learn-more {
         height: 50px;
-        font-size: 18px;
+        font-size: 0.8rem;
         font-weight: 400;
         text-align: center;
         padding: 5px;
@@ -280,6 +282,9 @@ nav {
   color: white;
   background-color: #333;
   transition: opacity 1s; }
+  #contact .email a {
+    text-decoration: none;
+    color: inherit; }
   #contact .links {
     display: flex;
     justify-content: center;
@@ -393,7 +398,7 @@ footer {
     font-size: 25px; }
   body {
     font-size: 18px; }
-  z .homepic:before {
+  .homepic:before {
     background-position: left; }
   #popup {
     font-size: 16px;
