@@ -18,7 +18,7 @@ var observer = new IntersectionObserver(function (entries) {
             if (entry.target.id == "portfolio") {
                 anime({
                     targets: '.projects',
-                    translateY: [-20, 0],
+                    translateY: [-40, 0],
                     opacity: 1,
                     easing: 'easeOutSine',
                     delay: anime.stagger(150),
