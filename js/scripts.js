@@ -1,23 +1,23 @@
-var mainFadeIn = document.querySelector('.hello');
-var fi1 = document.getElementById("proj");
-var fi2 = document.getElementById("portfolio");
-var fi3 = document.getElementById("about");
-var fi4 = document.getElementById("contact");
-var close = document.getElementById("close");
+const mainFadeIn = document.querySelector('.hello');
+const fi1 = document.querySelector("#proj");
+const fi2 = document.querySelector("#portfolio");
+const fi3 = document.querySelector("#about");
+const fi4 = document.querySelector("#contact");
+const close = document.querySelector("#close");
 
 // Intersection Observer========
-var options = {
+const options = {
     rootMargin: '-45% 0%'
 }
 
-var observer = new IntersectionObserver(function (entries) {
+const observer = new IntersectionObserver(function (entries) {
     console.log(entries);
     if (entries.filter(entry => entry.isIntersecting)) {
         entries.filter(entry => entry.isIntersecting).map(entry => {
             entry.target.style.opacity = 1;
             if (entry.target.id == "portfolio") {
                 anime({
-                    targets: '.projects',
+                    targets: '.project',
                     translateY: [-40, 0],
                     opacity: 1,
                     easing: 'easeOutSine',
