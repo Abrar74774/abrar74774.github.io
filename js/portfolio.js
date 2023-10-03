@@ -40,6 +40,7 @@ function closepopup() {
 }
 
 projDivs.forEach((div, index) => {
+  div.style.backgroundImage = `url(${data[index].img})`
   div.addEventListener("click", () => {popupEffect(data[index])})
   div.querySelector("h2").innerText = data[index].title;
   div.querySelector(".techs").innerText = data[index].lang.join(", ")
