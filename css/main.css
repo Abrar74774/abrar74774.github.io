@@ -23,6 +23,15 @@ html {
 body {
   min-height: 100%; }
 
+.main-content {
+  height: 100vh; }
+
+a {
+  color: #29dfff; }
+
+a:visited {
+  color: #a629ff; }
+
 h1 {
   text-align: center;
   font-size: 2rem;
@@ -95,25 +104,28 @@ ul {
       height: 100%;
       width: 75%; }
     #popup .content .lang {
+      overflow-y: auto;
       margin: 30px 60px 60px 30px;
       padding: 0 30px 30px;
       height: auto;
       width: 25%; }
       #popup .content .lang h2 {
         margin-top: 15px; }
-      #popup .content .lang a {
+      #popup .content .lang a, #popup .content .lang a:active {
+        color: #29dfff; }
+      #popup .content .lang .btn {
         text-decoration: none;
         font-weight: 400;
         text-align: center;
-        display: inline-block;
-        width: 250px;
+        display: block;
+        width: 100%;
         height: auto;
         padding: 10px 10px;
-        margin: 5px 0;
+        margin: 5px auto;
         background-color: #444;
         color: inherit;
         transition: background-color 0.3s; }
-        #popup .content .lang a:hover {
+        #popup .content .lang .btn:hover {
           background-color: #555; }
   #popup p {
     text-align: justify;
@@ -181,7 +193,6 @@ nav {
   font-weight: 100;
   font-size: 2.5rem;
   line-height: 1.1;
-  opacity: 0;
   transition: opacity 1.5s; }
   .hello span {
     color: #29dfff;
@@ -204,10 +215,10 @@ nav {
   transition: opacity 1s; }
   #portfolio .project {
     width: 400px;
-    height: 250px;
+    height: 200px;
     opacity: 0;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: 0 0;
     background-repeat: no-repeat;
     position: relative;
     padding: 0;
@@ -215,8 +226,10 @@ nav {
     box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s; }
     #portfolio .project .over {
-      margin: 0;
-      padding: 65px 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 0;
       color: #fdfdfd;
       background-color: #333333ff;
       opacity: 1;
@@ -233,7 +246,7 @@ nav {
         text-shadow: 0px 0px 10px #000f;
         cursor: pointer; }
       #portfolio .project .over h2 {
-        margin: 15px 0 0 0; }
+        margin: 5px 0 0 0; }
       #portfolio .project .over h3 {
         margin: 0 5px; }
       #portfolio .project .over .techs {
@@ -284,8 +297,7 @@ nav {
   background-color: #333;
   transition: opacity 1s; }
   #contact .email a {
-    text-decoration: none;
-    color: inherit; }
+    text-decoration: none; }
   #contact .links {
     display: flex;
     justify-content: center;
@@ -342,8 +354,7 @@ footer {
       #popup .content .lang {
         width: 100%;
         height: 50%;
-        margin: 0;
-        display: flex; }
+        margin: 0; }
         #popup .content .lang h2 {
           margin: 15px auto 10px; }
         #popup .content .lang h3 {
@@ -406,6 +417,7 @@ footer {
     width: 95%;
     right: 2.5%; }
     #popup #close {
+      background-color: inherit;
       margin: 7px;
       font-weight: 300; }
     #popup .content {

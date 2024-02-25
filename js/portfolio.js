@@ -11,13 +11,13 @@ function popupEffect(data) {
       <div id="close">&times;</div>
       <div class="content">
       <div class="view" style="background-image:url('${data.img}');"></div>
-      <div class="lang" data-simplebar >
+      <div class="lang">
       <h2>${data.title}</h2>
       <ul>
       ${data.lang.map(lang => '<li>' + lang + '</li>').join('')}
       </ul>
       <br>
-      <a href="${data.site}" target="_blank">Visit Site</a><a href="${data.source}" target="_blank">View Source on GitHub</a>
+      <a href="${data.site}" target="_blank" class="btn">Visit Site</a> ${data.source ? `<a href="${data.source}" class="btn target="_blank">View Source</a>` : ``}
       <p>${data.description}</p>
       </div>
       </div>
@@ -26,11 +26,13 @@ function popupEffect(data) {
   popup.style.opacity = '1';
   overlay.style.zIndex = '3';
   overlay.style.opacity = '0.7';
+  document.querySelector(".main-content").style.overflowY = 'hidden'
   document.getElementById("close").addEventListener("click", closepopup);
 };
     
 function closepopup() {
   // console.log("closing attempted")
+  document.querySelector(".main-content").style.overflowY = 'auto'
   overlay.style.opacity = '0';
   setTimeout(function () {
     popup.style.zIndex = '-9';

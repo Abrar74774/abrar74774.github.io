@@ -1,6 +1,7 @@
 $sec-col: #29dfff;
 $sec-col-hover: rgb(60, 147, 197);
 $transition-time: 0.3s;
+$link-visited: #a629ff;
 
 //-------Universal--------
 * {
@@ -33,6 +34,17 @@ body {
   min-height: 100%;
 }
 
+.main-content {
+  height: 100vh;
+}
+
+a {
+  color: $sec-col
+}
+
+a:visited {
+  color: $link-visited;
+}
 
 h1 {
   text-align: center;
@@ -114,6 +126,7 @@ ul {
       width: 75%;
     }
     .lang {
+      overflow-y: auto;
       margin: 30px 60px 60px 30px;
       padding: 0 30px 30px;
       height: auto;
@@ -121,15 +134,18 @@ ul {
       h2 {
         margin-top: 15px;
       }
-      a {
+      a, a:active {
+        color: $sec-col;
+      }
+      .btn {
         text-decoration: none;
         font-weight: 400;
         text-align: center;
-        display: inline-block;
-        width: 250px;
+        display: block;
+        width: 100%;
         height: auto;
         padding: 10px 10px;
-        margin: 5px 0;
+        margin: 5px auto;
         background-color: #444;
         color: inherit;
         transition: background-color $transition-time;
@@ -219,7 +235,6 @@ nav {
   font-weight: 100;
   font-size: 2.5rem;
   line-height: 1.1;
-  opacity: 0;
   transition: opacity 1.5s;
   span {
     color: $sec-col;
@@ -246,10 +261,10 @@ nav {
   transition: opacity 1s;
   .project {
     width: 400px;
-    height: 250px;
+    height: 200px;
     opacity: 0;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: 0 0;
     background-repeat: no-repeat;
     position: relative;
     padding: 0;
@@ -257,8 +272,10 @@ nav {
     box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.2);
     transition: background-color $transition-time;
     .over {
-      margin: 0;
-      padding: 65px 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 0;
       color: #fdfdfd;
       background-color: #333333ff;
       opacity: 1;
@@ -275,9 +292,8 @@ nav {
         text-shadow: 0px 0px 10px #000f;
         cursor: pointer;
       }
-
       h2 {
-        margin: 15px 0 0 0;
+        margin: 5px 0 0 0;
       }
       h3 {
         margin: 0 5px;
@@ -359,7 +375,6 @@ nav {
   transition: opacity 1s;
   .email a {
     text-decoration: none;
-    color: inherit;
   }
   .links {
     display: flex;
@@ -439,7 +454,6 @@ footer {
         width: 100%;
         height: 50%;
         margin: 0;
-        display: flex;
         h2 {
           margin: 15px auto 10px;
         }
@@ -532,6 +546,7 @@ footer {
     width: 95%;
     right: 2.5%;
     #close {
+      background-color: inherit;
       margin: 7px;
       font-weight: 300;
     }

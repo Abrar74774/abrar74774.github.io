@@ -40,4 +40,4 @@ observer.observe(fi4);
 
 // Start fade in
 
-setTimeout(() => mainFadeIn.style.opacity = 1, 1000);
+// setTimeout(() => mainFadeIn.style.opacity = 1, 1000);
