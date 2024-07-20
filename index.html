@@ -12,8 +12,7 @@
 
     body,
     html {
-      font-family: 'Heebo', sans-serif;
-      font-weight: 300;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
   </style>
   <link rel="stylesheet" href="./css/main.css">
@@ -27,7 +26,7 @@
     <div id="popup">
       <div id="close"></div>
     </div>
-  
+
     <div class="homepic">
       <div class="homepic-overlay">
         <nav>
@@ -44,9 +43,56 @@
         </h1>
       </div>
     </div>
-  
-  
-    <h1 id="proj" style="margin-top:100px;">Projects</h1>
+    <div id="about">
+      <div class="container">
+        <h1 class="section-title">About Me</h1>
+        <div class="about-content">
+          <p>
+            Hi there👋 I'm Abrar Shahriyar Hossain — a full stack web developer based in Qatar. I build solutions for the web - web apps, websites, plugins, widgets and more. I'm passionate about motorsports, swimming, video games and of course, coding.
+          </p>
+          <p>
+            I've worked with a wide range of clients from business owners to dev teams in areas like logistics, research, electronics and others. I've worked mostly with the Javascript ecosystem of libraries and frameworks for both frontend and backend, along with some python and wordpress.
+          </p>
+          <p>
+            Whether you are a business owner looking to boost your online presence, an entrepreneur with an innovative idea in mind for an app, a developer looking to collab, or just wanting to say hi, let's <a href="#contact">get in touch</a> and work together.   
+          </p>
+          <p>
+            My skills include:
+          </p>
+          <ul class="skills">
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>Node.js</li>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>VueJS</li>
+            <li>WordPress</li>
+            <li>jQuery</li>
+            <li>TailwindCSS</li>
+            <li>Sass</li>
+            <li>Bootstrap</li>
+          </ul>
+          <p>Some companies I've worked with:</p>
+          <ul class="companies">
+            <li>
+              <a href="https://www.solverminds.com/">Solverminds</a>
+            </li>
+            <li>
+              <a href="https://www.974perfumes.com">974Perfumes</a>
+            </li>
+            <li>
+              <a href="#contact">
+                +
+                Add Yours
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="section-title" id="proj" style="margin-top:100px;">Projects</h1>
     <noscript>Please enable Javascript to load projects</noscript>
     <div id="portfolio">
       <div class="project">
@@ -98,44 +144,9 @@
         </div>
       </div>
     </div>
-    <div id="about">
-      <h1>About Me</h1>
-      <div class="flex">
-        <div class="content">
-          <p>
-            I'm a full stack web developer. I enjoy building web apps, plugins, widgets, as well as websites. 
-            Interested in fields like productivity, energy, industry, engineering, electronics and others. 
-            I am a Computer Science graduate from Qatar University currently working as a freelancer on 
-            <a href="https://www.upwork.com/freelancers/~01200a674e3e02d7d9">Upwork</a>
-          </p>
-          <h2>My Skills</h2>
-          <div class="skills fa-ul">
-            <ul>
-              <li><span class="fa-li"><i class="fab fa-js"></i></span> JS / TS</li>
-              <li><span class="fa-li"><i class="fab fa-node-js"></i></span> Node.js</li>
-              <li><span class="fa-li"><i class="fab fa-react"></i></span> React</li>
-              <li><span class="fa-li"><i class="fab fa-vuejs"></i></span> VueJS</li>
-              <li><span class="fa-li"><i class="fab fa-angular"></i></span> Angular</li>
-              <li><span class="fa-li"><i class="fab fa-js"></i></span> jQuery</li>
-            </ul>
-            <ul>
-              <li><span class="fa-li"><i class="fab fa-html5"></i></span>HTML5</li>
-              <li><span class="fa-li"><i class="fab fa-css3-alt"></i></span> CSS</li>
-              <li><span class="fa-li"><i class="fab fa-css3-alt"></i></span> TailwindCSS</li>
-              <li><span class="fa-li"><i class="fab fa-sass"></i></span> Sass</li>
-              <li><span class="fa-li"><i class="fab fa-bootstrap"></i></span> Bootstrap</li>
-              <li><span class="fa-li"><i class="fab fa-wordpress"></i></span> WordPress</li>
-            </ul>
-          </div>
-          <p>
-            and more...
-          </p>
-        </div>
-        <!-- <div class="pic"></div>  -->
-      </div>
-    </div>
+
     <div id="contact">
-      <h1>Get In Touch</h1>
+      <h1 class="section-title">Get In Touch</h1>
       <h2 class="email">
         <a href="mailto:abrarshahriarhossain@gmail.com">
           abrarshahriarhossain@gmail.com
@@ -161,7 +172,7 @@
   <script src="./js/anime.min.js"></script>
   <script src="./js/data.js"></script>
   <script src="./js/portfolio.js"></script>
-  <script src="./js/scripts.js"></script>
+  <script src="./js/observers.js"></script>
 </body>
 
 </html>

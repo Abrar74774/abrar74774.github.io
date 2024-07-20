@@ -13,6 +13,7 @@ function popupEffect(data) {
       <div class="view" style="background-image:url('${data.img}');"></div>
       <div class="lang">
       <h2>${data.title}</h2>
+      Tech Stack:
       <ul>
       ${data.lang.map(lang => '<li>' + lang + '</li>').join('')}
       </ul>

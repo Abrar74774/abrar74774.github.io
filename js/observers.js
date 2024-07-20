@@ -18,10 +18,10 @@ const observer = new IntersectionObserver(function (entries) {
             if (entry.target.id == "portfolio") {
                 anime({
                     targets: '.project',
-                    translateY: [-40, 0],
+                    translateY: [-30, 0],
                     opacity: 1,
                     easing: 'easeOutSine',
-                    delay: anime.stagger(150),
+                    delay: anime.stagger(50),
                     duration: 500
                 });
             }

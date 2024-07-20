@@ -26,12 +26,13 @@ html {
   padding: 0;
   margin: 0;
   font-size: 1.1rem;
-  line-height: 1.5;
   position: relative;
 }
 
-body {
-  min-height: 100%;
+.container {
+  width: 850px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .main-content {
@@ -39,27 +40,22 @@ body {
 }
 
 a {
-  color: $sec-col
+  color: $sec-col;
+  text-decoration: none;
 }
 
 a:visited {
   color: $link-visited;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2rem;
+h1.section-title {
+  font-size: 2.5rem;
   font-weight: 300;
-  margin-bottom: 0;
 }
 
 h2 {
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 300;
-}
-
-h3 {
   font-weight: 300;
 }
 
@@ -322,47 +318,34 @@ nav {
   transition: opacity 0.7s;
 }
 
-.flex {
-  display: flex;
-  width: 50vw;
-  margin: 1px auto;
-  height: auto;
-  .content {
-    // flex:5;
-    min-width: 0;
-    padding: 10px 0;
-    height: auto;
-    p {
-      text-align: justify;
-      text-align-last: center;
-    }
-    .skills {
-      display: flex;
-      justify-content: center;
-      height: auto;
-      ul {
-        margin: 1px 5vw;
-        position: relative;
-        list-style-type: none;
-        width: 125px;
-        li span i {
-          color: $sec-col;
-        }
+.about-content {
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0 50px; /* Adjust gap between grid items as needed */
+    position: relative;
+  }
+  .companies {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      margin-right: 0.5rem;
+      border-radius: 6px;
+      background-color: #333;
+      a {
+        display: block;
+        color: white;
+        font-weight: 500;
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
       }
     }
   }
-  // .pic {
-  //     height:260px;
-  //     width:260px;
-  //     border: 4px solid $sec-col;
-  //     background: {
-  //         image:url("/dist/img/me.jpg");
-  //         size:contain;
-  //         repeat:no-repeat;
-  //         position: center;
-  //     }
-  //     border-radius: 50%;
-  // }
 }
 
 //==================== Contact ===================
@@ -381,7 +364,7 @@ nav {
     justify-content: center;
     position: relative;
     z-index: 2;
-    background-color: transparent;
+    background-color: transparent; 
     height: 80px;
     width: 100%;
     padding: 0 10px;
@@ -499,18 +482,18 @@ footer {
   #contact h2 {
     font-size: 4vw;
   }
-  #about .flex {
+  #about .content {
     width: 70vw;
   }
 }
 
 @media screen and (max-width: 786px) {
-  .flex .content .skills {
+  .content .skills {
     ul {
       margin: 0 auto;
     }
   }
-  #about .flex {
+  #about .content {
     width: 80vw;
   }
   #popup {
@@ -599,20 +582,10 @@ footer {
     font-weight: 300;
     font-size: 5vw;
   }
-  #about .flex ul {
+  #about .content ul {
     padding: 0;
   }
-  #about .flex ul:nth-child(2) {
+  #about .content ul:nth-child(2) {
     margin-left: 50px;
   }
-
-  // #about .flex {
-  //     width:90vw;
-  //     .content .skills {
-  //         flex-direction: row;
-  //     }
-  //     ul {padding: 0;}
-  //     ul:not(:last-child) {margin:0 30px 0 0;}
-
-  // }
 }

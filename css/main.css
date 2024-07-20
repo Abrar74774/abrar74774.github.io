@@ -17,33 +17,30 @@ html {
   padding: 0;
   margin: 0;
   font-size: 1.1rem;
-  line-height: 1.5;
   position: relative; }
 
-body {
-  min-height: 100%; }
+.container {
+  width: 850px;
+  margin: 0 auto;
+  padding: 1rem; }
 
 .main-content {
   height: 100vh; }
 
 a {
-  color: #29dfff; }
+  color: #29dfff;
+  text-decoration: none; }
 
 a:visited {
   color: #a629ff; }
 
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 0; }
+h1.section-title {
+  font-size: 2.5rem;
+  font-weight: 300; }
 
 h2 {
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 300; }
-
-h3 {
   font-weight: 300; }
 
 ul {
@@ -265,29 +262,31 @@ nav {
   padding: 100px 0;
   transition: opacity 0.7s; }
 
-.flex {
+.about-content .skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0 50px;
+  /* Adjust gap between grid items as needed */
+  position: relative; }
+
+.about-content .companies {
   display: flex;
-  width: 50vw;
-  margin: 1px auto;
-  height: auto; }
-  .flex .content {
-    min-width: 0;
-    padding: 10px 0;
-    height: auto; }
-    .flex .content p {
-      text-align: justify;
-      text-align-last: center; }
-    .flex .content .skills {
-      display: flex;
-      justify-content: center;
-      height: auto; }
-      .flex .content .skills ul {
-        margin: 1px 5vw;
-        position: relative;
-        list-style-type: none;
-        width: 125px; }
-        .flex .content .skills ul li span i {
-          color: #29dfff; }
+  margin: 0;
+  padding: 0; }
+  .about-content .companies li {
+    list-style: none;
+    margin-right: 0.5rem;
+    border-radius: 6px;
+    background-color: #333; }
+    .about-content .companies li a {
+      display: block;
+      color: white;
+      font-weight: 500;
+      padding: 2rem;
+      width: 100%;
+      height: 100%;
+      text-decoration: none; }
 
 #contact {
   margin-top: 80px;
@@ -385,13 +384,13 @@ footer {
     transform: translateY(-100%); }
   #contact h2 {
     font-size: 4vw; }
-  #about .flex {
+  #about .content {
     width: 70vw; } }
 
 @media screen and (max-width: 786px) {
-  .flex .content .skills ul {
+  .content .skills ul {
     margin: 0 auto; }
-  #about .flex {
+  #about .content {
     width: 80vw; }
   #popup {
     width: 90%;
@@ -453,7 +452,7 @@ footer {
   #contact h2 {
     font-weight: 300;
     font-size: 5vw; }
-  #about .flex ul {
+  #about .content ul {
     padding: 0; }
-  #about .flex ul:nth-child(2) {
+  #about .content ul:nth-child(2) {
     margin-left: 50px; } }
