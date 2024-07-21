@@ -155,29 +155,26 @@ nav {
       nav a:hover i {
         color: white; }
 
-.homepic-overlay {
-  background-color: #0000008d;
-  position: absolute;
-  z-index: 5;
-  height: 100%;
-  width: 100%; }
-
-.homepic {
-  z-index: 4;
+.home {
   position: relative;
   height: 100vh;
   overflow-x: hidden;
-  background-color: #222; }
-  .homepic:before {
-    content: "";
-    margin: 0 auto;
-    filter: blur(0.17rem);
-    background-image: url("../img/coding-min.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 102%;
-    height: 100%;
-    position: absolute; }
+  background-color: #000; }
+
+.homepic {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  filter: blur(0.17rem) opacity(0.4);
+  background-image: url("../img/coding-min.jpg");
+  background-size: cover; }
+
+.home-content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2; }
 
 .hello {
   text-align: center;
@@ -185,7 +182,7 @@ nav {
   position: absolute;
   top: 50%;
   transform: translateY(-100%);
-  z-index: 1;
+  z-index: 999;
   width: 100%;
   font-weight: 100;
   font-size: 2.5rem;
@@ -198,18 +195,14 @@ nav {
     display: none; }
 
 #proj {
-  margin-top: 80px;
-  opacity: 0;
-  transition: opacity 1s; }
+  margin-top: 80px; }
 
 #portfolio {
-  opacity: 0;
   display: flex;
   width: 95vw;
   margin: 20px auto;
   flex-wrap: wrap;
-  justify-content: center;
-  transition: opacity 1s; }
+  justify-content: center; }
   #portfolio .project {
     width: 400px;
     height: 200px;
@@ -256,11 +249,8 @@ nav {
         transition: color 0.3s; }
 
 #about {
-  margin-top: 80px;
-  opacity: 0;
   width: 100%;
-  padding: 100px 0;
-  transition: opacity 0.7s; }
+  padding: 100px 0; }
 
 .about-content .skills {
   display: grid;
@@ -290,11 +280,9 @@ nav {
 
 #contact {
   margin-top: 80px;
-  opacity: 0;
   padding: 150px 5vw;
   color: white;
-  background-color: #333;
-  transition: opacity 1s; }
+  background-color: #333; }
   #contact .email a {
     text-decoration: none; }
   #contact .links {
@@ -451,8 +439,4 @@ footer {
     padding: 100px 5vw; }
   #contact h2 {
     font-weight: 300;
-    font-size: 5vw; }
-  #about .content ul {
-    padding: 0; }
-  #about .content ul:nth-child(2) {
-    margin-left: 50px; } }
+    font-size: 5vw; } }
