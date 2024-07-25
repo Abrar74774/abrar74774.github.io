@@ -10,7 +10,7 @@
 
 body,
 html {
-  background-color: #222;
+  background-color: #111;
   color: #fdfdfd;
   min-height: 100%;
   width: 100%;
@@ -32,11 +32,12 @@ a {
   text-decoration: none; }
 
 a:visited {
-  color: #a629ff; }
+  color: #29dfff; }
 
 h1.section-title {
-  font-size: 2.5rem;
-  font-weight: 300; }
+  font-size: 4rem;
+  font-weight: 300;
+  overflow: hidden; }
 
 h2 {
   text-align: center;
@@ -46,6 +47,12 @@ h2 {
 ul {
   margin: 0;
   padding: 0 0 0 20px; }
+
+.frame {
+  overflow: hidden;
+  line-height: 1; }
+  .frame div {
+    line-height: 1; }
 
 #overlay {
   background-color: rgba(0, 0, 0, 0);
@@ -134,27 +141,6 @@ ul {
   width: 80%;
   margin: 0 auto; }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  z-index: 2;
-  background-color: transparent;
-  height: 80px;
-  width: 100%;
-  margin-bottom: -80px;
-  padding: 0; }
-  nav a {
-    padding: 20px; }
-    nav a i {
-      color: #29dfff;
-      font-size: 2rem;
-      transition: color 0.3s; }
-    nav a:hover {
-      cursor: pointer; }
-      nav a:hover i {
-        color: white; }
-
 .home {
   position: relative;
   height: 100vh;
@@ -166,7 +152,8 @@ nav {
   height: 100%;
   width: 100%;
   z-index: 1;
-  filter: blur(0.1rem) opacity(0.3) grayscale(0.2);
+  transition: transform 300ms ease-out;
+  filter: blur(0rem) opacity(0.25) grayscale(0.2);
   overflow: hidden; }
   .homepic video {
     height: 100%;
@@ -179,19 +166,48 @@ nav {
   position: absolute;
   z-index: 2; }
 
+.home-content nav {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: transparent;
+  height: 80px;
+  width: 100%; }
+  .home-content nav .nav-background {
+    position: absolute;
+    background-color: #111;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 12px 2px #0003; }
+  .home-content nav .nav-content {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 5rem;
+    z-index: 3; }
+    .home-content nav .nav-content a {
+      padding: 20px;
+      color: white; }
+      .home-content nav .nav-content a:hover {
+        cursor: pointer; }
+        .home-content nav .nav-content a:hover i {
+          color: white; }
+
 .hello {
   text-align: center;
   color: white;
   position: absolute;
   top: 50%;
   transform: translateY(-100%);
-  z-index: 999;
   width: 100%;
   font-weight: 100;
   font-size: 2.5rem;
   line-height: 1.1;
   transition: opacity 1.5s; }
-  .hello span {
+  .hello .glow {
     color: #29dfff;
     font-weight: 300; }
   .hello:after {
