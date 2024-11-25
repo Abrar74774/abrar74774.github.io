@@ -20,6 +20,13 @@
 </head>
 
 <body>
+    <div id="message">
+      <button class="close">&times;</button>
+      <div class="text">
+        This is my old portfolio website with some modifications later carried over to my new website.
+        Check out my new website <a href="https://abrarshahriyar.com">here</a>!
+      </div>
+    </div>
     <div id="overlay"></div>
     <div id="popup">
       <div id="close"></div>
@@ -191,6 +198,12 @@
           target="_blank">View Source Code</a>
       </div>
     </footer>
+  <script>
+    const closeMsg = document.querySelector('#message .close')
+    const msg = document.querySelector('#message')
+
+    closeMsg.addEventListener("click", () => msg.style.display = 'none')
+  </script>
   <script src="./js/ScrollTrigger.min.js"></script>
   <script src="./js/gsap.min.js"></script>
   <script src="./js/data.js"></script>

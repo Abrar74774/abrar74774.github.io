@@ -64,6 +64,29 @@ ul {
   height: 100%;
   width: 100%; }
 
+#message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background-color: #222;
+  color: white; }
+  #message .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer; }
+  #message .text {
+    max-width: 600px;
+    text-align: center; }
+
 #popup {
   height: 75%;
   width: 85%;
